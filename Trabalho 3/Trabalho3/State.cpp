@@ -3,7 +3,8 @@
 #include "Face.hpp"
 #include "Util.hpp"
 
-State::State() : quitRequested(false), bg("img/ocean.jpg") {
+State::State() : quitRequested(false), bg("img/ocean.jpg"), tileSet(64, 64, "img/tileset.png"),
+    tileMap("map/tileMap.txt", &tileSet) {
 
 }
 
@@ -31,8 +32,10 @@ bool State::QuitRequested() {
 void State::Render() {
     bg.Render(0,0);
 
+    tileMap.RenderLayer(0, 0, 0);
     for(auto it = objectArray.begin(); it != objectArray.end(); it++)
         (*it)->Render();
+    tileMap.RenderLayer(1, 0, 0);
 }
 
 Sprite State::getBg(){

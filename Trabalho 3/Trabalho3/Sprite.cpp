@@ -1,8 +1,9 @@
 #include "Sprite.hpp"
 #include "Game.hpp"
 #include <iostream>
-using namespace std;
+#include "Resources.hpp"
 
+using std::cout;
 Sprite::Sprite() {
     texture = nullptr;
 }
@@ -13,8 +14,7 @@ Sprite::Sprite(string file) {
 }
 
 Sprite::~Sprite() {
-     if (texture)
-        SDL_DestroyTexture(texture);
+    // texture agora tratará de desalocações
 }
 
 bool Sprite::IsOpen() {
@@ -30,14 +30,10 @@ int Sprite::GetHeight() {
 }
 
 void Sprite::open(string file) {
-    if (texture)
-        SDL_DestroyTexture(texture);
-
-    texture = IMG_LoadTexture(Game::GetInstance().GetRenderer(), file.c_str());
+    texture = Resources::getImage(file);
 
     if (!texture) {
-        string msg = SDL_GetError();
-        cout << "Error while loading texture on file " << file << "\n" << msg << endl;
+        cout << SDL_GetError() << endl;
     }
 
     SDL_QueryTexture(texture, nullptr, nullptr, &width, &height);

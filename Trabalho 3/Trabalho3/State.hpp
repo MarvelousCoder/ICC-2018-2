@@ -3,6 +3,8 @@
 
 #include "Sprite.hpp"
 #include "GameObject.hpp"
+#include "TileSet.hpp"
+#include "TileMap.hpp"
 #include "SDL.h"
 #include "SDL_image.h"
 #include <vector>
@@ -14,6 +16,8 @@ class State {
     void Input();
     void AddObject(float mouseX, float mouseY);
     std::vector<std::unique_ptr<GameObject>> objectArray;
+    TileSet tileSet;
+    TileMap tileMap;
 public:
     State();
     ~State();

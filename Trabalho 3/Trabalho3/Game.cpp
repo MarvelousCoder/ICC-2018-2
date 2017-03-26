@@ -4,12 +4,16 @@
 #include <iostream>
 #include <string>
 #include "SDL_render.h"
+#include "Resources.hpp"
 
+
+#include <algorithm>
 using namespace std;
 
 Game *Game::instance = nullptr;
 
 Game::Game(string title, int width, int height) {
+    srand(time(NULL));
     if(!instance) {
         instance = this;
     } else {
@@ -37,7 +41,7 @@ Game::Game(string title, int width, int height) {
         cout << "Falha em SDL_CreateRenderer\n";
         exit(0);
     }
-    state = new State;
+    state = new State();
 
 }
 
@@ -71,5 +75,5 @@ void Game::Run() {
         SDL_RenderPresent(renderer);
         SDL_Delay(33);
     }
+    Resources::clearImages();
 }
-

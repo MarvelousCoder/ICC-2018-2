@@ -6,6 +6,8 @@
 #include "State.hpp"
 #include <string>
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 class Game {
