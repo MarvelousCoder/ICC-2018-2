@@ -1,0 +1,14 @@
+*~
+*.swp
+
+bin/*
+!bin/.gitkeep
+
+obj/*
+!obj/.gitkeep
+
+tags
+.idea/*
+
+res
+res/res2

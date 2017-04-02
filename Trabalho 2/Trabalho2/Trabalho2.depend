@@ -3,9 +3,9 @@
 	<iostream>
 	"Game.hpp"
 
-1490404584 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\game.hpp
-	"SDL.H"
-	"SDL_image.h"
+1491090882 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\game.hpp
+	<SDL.h>
+	<SDL_image.h>
 	"State.hpp"
 	<string>
 	<iostream>
@@ -335,39 +335,36 @@
 	"begin_code.h"
 	"close_code.h"
 
-1490408587 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\state.hpp
+1490742625 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\state.hpp
 	"Sprite.hpp"
 	"GameObject.hpp"
-	"SDL.h"
-	"SDL_image.h"
+	<SDL.h>
+	<SDL_image.h>
 	<vector>
 	<memory>
 
-1490378055 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\sprite.hpp
-	"SDL.H"
+1490742588 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\sprite.hpp
+	<SDL.h>
 	<string>
-	"SDL_rect.h"
-	"SDL_render.h"
-	"SDL_image.h"
+	<SDL_rect.h>
+	<SDL_render.h>
+	<SDL_image.h>
 
 1490482499 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\sprite.cpp
 	"Sprite.hpp"
 	"Game.hpp"
 	<iostream>
 
-1490483300 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\state.cpp
+1491090396 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\state.cpp
 	"State.hpp"
 	"Game.hpp"
 	"Face.hpp"
-	"Util.hpp"
 
-1490404576 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\game.cpp
-	"SDL.H"
-	"SDL_image.h"
+1491090585 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\game.cpp
 	"Game.hpp"
 	<iostream>
 	<string>
-	"SDL_render.h"
+	<SDL_render.h>
 
 1490483232 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\rect.cpp
 	"Rect.hpp"
@@ -391,7 +388,7 @@
 1490405238 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\gameobject.hpp
 	"Rect.hpp"
 
-1490483096 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\face.cpp
+1491010260 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\face.cpp
 	"Face.hpp"
 
 1490481675 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 2\trabalho2\face.hpp

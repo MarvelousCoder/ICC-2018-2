@@ -1,7 +1,7 @@
 #ifndef SPRITEHPP
 #define SPRITEHPP
 
-#include "SDL.H"
+#include "SDL.h"
 #include <string>
 #include "SDL_rect.h"
 #include "SDL_render.h"

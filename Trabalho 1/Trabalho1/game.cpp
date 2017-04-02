@@ -1,4 +1,4 @@
-#include "SDL.H"
+#include "SDL.h"
 #include "SDL_image.h"
 #include "game.hpp"
 #include <iostream>

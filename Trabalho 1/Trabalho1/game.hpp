@@ -1,7 +1,7 @@
 #ifndef GAMEHPP
 #define GAMEHPP
 
-#include "SDL.H"
+#include "SDL.h"
 #include "SDL_image.h"
 #include "state.hpp"
 #include <string>

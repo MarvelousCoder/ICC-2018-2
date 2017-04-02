@@ -6,12 +6,12 @@
 	"Sprite.hpp"
 	"GameObject.hpp"
 
-1490378055 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\sprite.hpp
-	"SDL.H"
+1490743528 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\sprite.hpp
+	<SDL.h>
 	<string>
-	"SDL_rect.h"
-	"SDL_render.h"
-	"SDL_image.h"
+	<SDL_rect.h>
+	<SDL_render.h>
+	<SDL_image.h>
 
 1476935975 c:\tdm-gcc-64\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -351,35 +351,30 @@
 	<iostream>
 	<cmath>
 
-1490538374 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\game.cpp
-	"SDL.H"
-	"SDL_image.h"
+1490743562 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\game.cpp
 	"Game.hpp"
 	<iostream>
 	<string>
-	"SDL_render.h"
+	<SDL_render.h>
 	"Resources.hpp"
-	<vector>
 	<algorithm>
-	<functional>
-	<map>
 
-1490538301 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\game.hpp
-	"SDL.H"
-	"SDL_image.h"
+1490743503 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\game.hpp
+	<SDL.h>
+	<SDL_image.h>
 	"State.hpp"
 	<string>
 	<iostream>
 	<cstdlib>
 	<ctime>
 
-1490533254 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\state.hpp
+1490743469 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\state.hpp
 	"Sprite.hpp"
 	"GameObject.hpp"
 	"TileSet.hpp"
 	"TileMap.hpp"
-	"SDL.h"
-	"SDL_image.h"
+	<SDL.h>
+	<SDL_image.h>
 	<vector>
 	<memory>
 
@@ -429,17 +424,16 @@
 	"Vec2.hpp"
 	<iostream>
 
-1490538597 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\resources.hpp
+1490743481 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\resources.hpp
 	<unordered_map>
 	<string>
-	"SDL_render.h"
+	<SDL_render.h>
 
 1490534001 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\resources.c
 
-1490559732 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\resources.cpp
+1490743576 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\resources.cpp
 	"Resources.hpp"
 	"Game.hpp"
-	"SDL_image.h"
 	<utility>
 	<string>
 	<iostream>
