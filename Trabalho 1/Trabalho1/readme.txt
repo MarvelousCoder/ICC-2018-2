@@ -1,1 +1,0 @@
-Desenvolvido em Codeblocks no Windows. Eu copiei todas as dlls da pasta bin do SDL para a pasta bin do meu compilador, pois isso permite que o compilador encontre as dlls em tempo de execução, sem precisar colocá-las na mesma pasta do projeto, assim não tive necessidade de copiar as dlls para a pasta do projeto.
