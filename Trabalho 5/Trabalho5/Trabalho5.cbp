@@ -2,55 +2,52 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Trabalho3" />
+		<Option title="Trabalho5" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/Trabalho3" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-Wall" />
-					<Add option="-std=c++11" />
-					<Add option="-g" />
-					<Add directory="../../../../../../../../TDM-GCC-64/include" />
-					<Add directory="../../../../../../../../TDM-GCC-64/include/SDL2" />
-				</Compiler>
-				<Linker>
-					<Add option="-lSDL2 -lSDL2main -lSDL2main -lSDL2 -lSDL2_image" />
-					<Add option="-lSDL2_ttf -lSDL2_mixer -lMinGW32" />
-					<Add directory="../../../../../../../../TDM-GCC-64/lib" />
-				</Linker>
-			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Trabalho3" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Trabalho5" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-std=c++11" />
+					<Add directory="../../../../../../../../TDM-GCC-64/include" />
+					<Add directory="../../../../../../../../TDM-GCC-64/include/SDL2" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-lSDL2main -lSDL2 -lSDL2_image" />
+					<Add option="-lSDL2_ttf -lSDL2_mixer -lMinGW32" />
+					<Add directory="../../../../../../../../TDM-GCC-64/lib" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../../../Técnicas de Programação 2/Trabalho 1/trab1-tp2-2017-1/subject.hpp" />
+		<Unit filename="Alien.cpp" />
+		<Unit filename="Alien.hpp" />
+		<Unit filename="Bullet.cpp" />
+		<Unit filename="Bullet.hpp" />
+		<Unit filename="Camera.cpp" />
+		<Unit filename="Camera.hpp" />
 		<Unit filename="Face.cpp" />
 		<Unit filename="Face.hpp" />
 		<Unit filename="Game.cpp" />
 		<Unit filename="Game.hpp" />
 		<Unit filename="GameObject.cpp" />
 		<Unit filename="GameObject.hpp" />
+		<Unit filename="InputManager.cpp" />
+		<Unit filename="InputManager.hpp" />
+		<Unit filename="Minion.cpp" />
+		<Unit filename="Minion.hpp" />
 		<Unit filename="Rect.cpp" />
 		<Unit filename="Rect.hpp" />
-		<Unit filename="Resources.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="Resources.cpp" />
 		<Unit filename="Resources.hpp" />
 		<Unit filename="Sprite.cpp" />

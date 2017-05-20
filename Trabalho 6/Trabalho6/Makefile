@@ -35,7 +35,7 @@ EXEC = RaphaelSoares_140160299
 ifeq ($(OS),Windows_NT)
 # Comando para remover um diretório recursivamente e ignorar caso não exista
 RMDIR = rd /s /q
-# Comando para deletar um arquivo
+#Comando para deletar um arquivo
 RM = del
 # Caminho para os "headers" da biblioteca SDL2 no Windows
 SDL_PATH = C:\TDM-GCC-64

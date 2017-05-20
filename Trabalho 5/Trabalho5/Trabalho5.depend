@@ -1,12 +1,30 @@
 # depslib dependency file v1.0
-1490483096 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\face.cpp
-	"Face.hpp"
+1493951022 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\alien.cpp
+	"Alien.hpp"
+	"InputManager.hpp"
+	"Camera.hpp"
+	<SDL.h>
 
-1490481675 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\face.hpp
-	"Sprite.hpp"
+1493951011 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\alien.hpp
+	<queue>
 	"GameObject.hpp"
+	"Sprite.hpp"
+	"Minion.hpp"
 
-1490743528 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\sprite.hpp
+1493946752 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\gameobject.hpp
+	"Rect.hpp"
+
+1490483198 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\rect.hpp
+	"Vec2.hpp"
+	<vector>
+	<cmath>
+	<algorithm>
+
+1493946910 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\vec2.hpp
+	<iostream>
+	<cmath>
+
+1493949250 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\sprite.hpp
 	<SDL.h>
 	<string>
 	<SDL_rect.h>
@@ -338,28 +356,31 @@
 	"begin_code.h"
 	"close_code.h"
 
-1490405238 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\gameobject.hpp
-	"Rect.hpp"
+1493943190 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\minion.hpp
+	"GameObject.hpp"
+	"Sprite.hpp"
 
-1490483198 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\rect.hpp
+1493947446 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\inputmanager.hpp
 	"Vec2.hpp"
-	<vector>
-	<cmath>
-	<algorithm>
 
-1490481599 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\vec2.hpp
-	<iostream>
-	<cmath>
+1492211419 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\camera.hpp
+	"GameObject.hpp"
 
-1490743562 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\game.cpp
+1493947255 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\bullet.cpp
+	"Bullet.hpp"
+	"Camera.hpp"
+
+1493944792 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\bullet.hpp
+	"Sprite.hpp"
+	"Vec2.hpp"
+	"GameObject.hpp"
+
+1492211410 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\camera.cpp
+	"Camera.hpp"
 	"Game.hpp"
-	<iostream>
-	<string>
-	<SDL_render.h>
-	"Resources.hpp"
-	<algorithm>
+	"InputManager.hpp"
 
-1490743503 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\game.hpp
+1492203680 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\game.hpp
 	<SDL.h>
 	<SDL_image.h>
 	"State.hpp"
@@ -368,7 +389,7 @@
 	<cstdlib>
 	<ctime>
 
-1491147778 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\state.hpp
+1493948051 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\state.hpp
 	"Sprite.hpp"
 	"GameObject.hpp"
 	"TileSet.hpp"
@@ -378,68 +399,95 @@
 	<vector>
 	<memory>
 
-1490405090 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\gameobject.cpp
-	"GameObject.hpp"
-
-1490404816 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\main.cpp
-	<iostream>
-	"Game.hpp"
-
-1490483232 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\rect.cpp
-	"Rect.hpp"
-
-1490534810 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\sprite.cpp
-	"Sprite.hpp"
-	"Game.hpp"
-	<iostream>
-	"Resources.hpp"
-
-1491147824 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\state.cpp
-	"State.hpp"
-	"Game.hpp"
-	"Face.hpp"
-
-1490484164 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\util.hpp
-	<vector>
-	<map>
-	<cmath>
-
-1490479623 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\util.cpp
-	"Util.hpp"
-
-1490484231 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\vec2.cpp
-	"Vec2.hpp"
-
-1490490982 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\tileset.hpp
+1490490982 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\tileset.hpp
 	<string>
 	"Sprite.hpp"
 
-1490533817 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\tilemap.hpp
+1492207548 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\tilemap.hpp
 	"TileSet.hpp"
 	<vector>
-
-1490491235 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\tileset.cpp
-	"TileSet.hpp"
 	"Vec2.hpp"
-	<iostream>
 
-1490743481 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\resources.hpp
+1493950928 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\face.cpp
+	"Face.hpp"
+	"Camera.hpp"
+	"InputManager.hpp"
+
+1493950919 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\face.hpp
+	"Sprite.hpp"
+	"GameObject.hpp"
+
+1492285489 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\game.cpp
+	"Game.hpp"
+	<iostream>
+	<string>
+	<SDL_render.h>
+	"Resources.hpp"
+	"InputManager.hpp"
+	"Camera.hpp"
+	<algorithm>
+
+1490743481 c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\resources.hpp
 	<unordered_map>
 	<string>
 	<SDL_render.h>
 
-1490534001 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\resources.c
+1493946834 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\gameobject.cpp
+	"GameObject.hpp"
 
-1490743576 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\resources.cpp
+1493947444 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\inputmanager.cpp
+	"InputManager.hpp"
+	"Face.hpp"
+	<SDL_events.h>
+	<string>
+
+1490404816 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\main.cpp
+	<iostream>
+	"Game.hpp"
+
+1494041172 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\minion.cpp
+	"Minion.hpp"
+	"Resources.hpp"
+	"Camera.hpp"
+	"Bullet.hpp"
+	"State.hpp"
+	"Game.hpp"
+
+1490483232 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\rect.cpp
+	"Rect.hpp"
+
+1490743576 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\resources.cpp
 	"Resources.hpp"
 	"Game.hpp"
 	<utility>
 	<string>
 	<iostream>
 
-1490533975 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 3\trabalho3\tilemap.cpp
+1493949233 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\sprite.cpp
+	"Sprite.hpp"
+	"Game.hpp"
+	<iostream>
+	"Resources.hpp"
+
+1493948165 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\state.cpp
+	"State.hpp"
+	"Game.hpp"
+	"Face.hpp"
+	"Camera.hpp"
+	"InputManager.hpp"
+	"Alien.hpp"
+
+1492210695 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\tilemap.cpp
 	"TileMap.hpp"
 	<string>
 	<stdio.h>
 	<iostream>
+
+1490491235 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\tileset.cpp
+	"TileSet.hpp"
+	"Vec2.hpp"
+	<iostream>
+
+1493946955 source:c:\users\raphael_note\desktop\unb\listas e trabalhos\introd. ao desenv. de jogos\trabalho 5\trabalho5\vec2.cpp
+	"Vec2.hpp"
 
