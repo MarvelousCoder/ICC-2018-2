@@ -42,7 +42,7 @@ Game::Game(string title, int width, int height) {
         cout << "Falha em SDL_CreateWindow\n";
         exit(0);
     }
-    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if(renderer == nullptr) {
         cout << "Falha em SDL_CreateRenderer\n";
         exit(0);
