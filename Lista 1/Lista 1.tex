@@ -1,0 +1,280 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Lista de Exercícios 1} \\
+	\vspace{9pt}
+	{\large Variáveis, Entrada e Saída de Dados}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As listas de exercícios serão corrigidas por um corretor automático, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item As questões estão em ordem de dificuldade. Cada lista possui 7 exercícios, sendo 1 questão fácil, 3 ou 4 médias e 2 ou 3 difíceis.
+	\item Assim como as listas, as provas devem ser feitas em Python 3.5. Use essa versão do Python.
+	\item Leia com atenção e faça exatamente o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Média simples}}
+\end{center}
+\vspace{5pt}
+Faça um programa que peça ao usuário para informar dois números reais, conforme especificado em 
+\textbf{Entrada}. Depois calcule a média desses números e mostre-a na tela, conforme especificado em \textbf{Saída}.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+Leia 2 números reais do teclado, um por linha.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Imprima na tela \textbf{\textit{media}}, onde \textbf{\textit{media}} é um real com duas casas decimais que representa a média dos dois reais lidos do teclado conforme exemplo abaixo.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+	\begin{tabular}{l}
+	4 \\
+	4
+	\end{tabular} & 4.00 \\ \hline
+		
+	\begin{tabular}{l}
+	0 \\
+	1
+	\end{tabular} & 0.50 \\ \hline
+	
+	\begin{tabular}{l}
+	9.525 \\
+	4.2
+	\end{tabular} & 6.86 \\ \hline
+	
+	\end{tabular}
+	\caption{Questão A}
+	\label{tabela1}
+\end{table}
+
+\newpage % Questão B
+\begin{center}
+\textbf{{\Large Questão B - Metros para Pés}}
+\end{center}
+\vspace{5pt}
+Sabendo que o pé equivale a 0.3048 metros, faça um programa que leia uma medida em pés e imprima o valor
+em metros.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+Leia um número real do teclado, que corresponde a medida em pés.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Imprima na tela o valor em metros, com duas casas decimais após a vírgula.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+	4 & 1.22 \\ \hline
+	3 & 0.91 \\ \hline
+	5.5 & 1.68 \\ \hline
+	\end{tabular}
+	\caption{Questão B}
+	\label{tabela2}
+\end{table}
+
+\newpage % Questão C
+\begin{center}
+\textbf{{\Large Questão C - Distância Entre Dois Carros}}
+\end{center}
+\vspace{5pt}
+Dois carros (X e Y) partem em uma mesma direção. O carro X sai com velocidade constante de 60 Km/h e o carro Y sai com velocidade constante de 90 Km/h (o carro Y sempre estará na frente do carro X). \newline
+Leia a distância (em Km) e calcule quanto tempo leva (em minutos) para o carro Y tomar essa distância do carro X.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+Leia um único inteiro $x \geq 0$, que representa a distância.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Imprima o tempo necessário seguido da mensagem `` minutos'', conforme exemplo abaixo.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+	30 & 60 minutos \\ \hline
+	110 & 220 minutos \\ \hline
+	7 & 14 minutos \\ \hline
+	\end{tabular}
+	\caption{Questão C}
+	\label{tabela3}
+\end{table}
+
+\newpage % Questão D
+\begin{center}
+\textbf{{\Large Questão D - Distância e Números Complexos}}
+\end{center}
+\vspace{5pt}
+Leia quatro valores correspondentes aos eixos x e y de dois pontos quaisquer no plano: $(x_1,y_1)$ e 
+$(x_2,y_2)$ e calcule a distância entre eles, mostrando 4 casas decimais após a vírgula, segundo a fórmula:
+$$ \textrm{Distancia} = \, \sqrt{(x_2 - x_1 )^2 + (y_2 - y_1 )^2} $$
+Python possui complex como tipo de dados. Um número complexo tem um componente real e imaginário, ambos representados pelo tipo float em Python (é possível acessá-los separadamente). Leia também um número complexo $\textit{z = a + bj}$ e calcule seu módulo $|z|$ (distância até a origem), mostrando 4 casas decimais após a vírgula, usando a fórmula: $$|z|= \sqrt{(a^2+b^2)}$$
+\textbf{{\large Entrada}} \newline
+A entrada contém três linhas de dados. A primeira linha contém dois valores de ponto flutuante $x_1$ e $y_1$, a segunda também contém dois valores de ponto flutuante $x_2$ e $y_2$ e a terceira contém um número complexo.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Calcule e imprima o valor da distância e do módulo segundo as fórmulas fornecidas, com 4 casas decimais.
+\newline \newline
+\textbf{{\large Nota}} \newline
+Para ler vários valores em uma mesma linha, use \textbf{\textit{input().split()}}. Se o argumento de split for vazio, o separador das variáveis é um espaço em branco. Porém, lembre-se que input lê apenas strings do teclado, portanto você deverá converter as strings em floats. No exemplo a seguir, o usuário digita valores separados por um espaço em branco e aperta enter para enviá-los, então, o programa lê esses valores separados por espaços como strings (na ordem em que aparecem), guardados nas variáveis correspondentes e os converte para floats: \newline
+\textbf{\textit{A, B, C = input().split() \newline
+A, B, C = [float(A), float(B), float(C)]}}
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+	\begin{tabular}{ll}
+	1.0 & 7.0 \\
+	5.0 & 9.0 \\
+	2j
+	\end{tabular} & \begin{tabular}{l} 4.4721 \\ 2.000 \end{tabular} \\ \hline
+	\begin{tabular}{ll}
+	-2.5 & 0.4 \\
+	12.1 & 7.3 \\
+	1+2j
+	\end{tabular} & \begin{tabular}{l} 16.1484 \\ 2.2361 \end{tabular} \\ \hline
+	\begin{tabular}{ll}
+	2.5 & -0.4 \\
+	-12.2 & 7.0 \\
+	3+4j
+	\end{tabular} & \begin{tabular}{l} 16.4575 \\ 5.0000 \end{tabular} \\ \hline
+	\end{tabular}
+	\caption{Questão D}
+	\label{tabela4}
+\end{table}
+
+\newpage % Questão E
+\begin{center}
+\textbf{{\Large Questão E - Média Ponderada}}
+\end{center}
+\vspace{5pt}
+Faça um programa que leia 5 números reais e calcule a \textbf{média ponderada} desses números,
+\textbf{usando apenas duas variáveis}. \newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada contém cinco números reais: $x_1$, $x_2$, $x_3$, $x_4$ e $x_5$.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Calcule e imprima a média \textit{\textbf{m}} (\textbf{com 3 casas decimais}) usando a fórmula:
+$$\textrm{m} = \dfrac{1x_1 + 2x_2 + 3x_3 + 4x_4 + 5x_5}
+{15} $$
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+	\begin{tabular}{l}
+	4 \\ 4 \\ 4 \\ 4 \\ 4
+	\end{tabular} & 4.0000 \\ \hline
+	\begin{tabular}{l}
+	0 \\ 1 \\ 2 \\ 3 \\ 4
+	\end{tabular} & 2.667 \\ \hline
+	\begin{tabular}{l}
+	1.525 \\ 2 \\ 2 \\ 2 \\ 4.2
+	\end{tabular} & 2.702 \\ \hline
+	\end{tabular}
+	\caption{Questão E}
+	\label{tabela5}
+\end{table}
+
+\newpage % Questão F
+\begin{center}
+\textbf{{\Large Questão F - Relógio Digital}}
+\end{center}
+\vspace{5pt}
+Leia do teclado um valor inteiro x, que é o tempo de duração em segundos de um determinado evento, e informe-o expresso no formato: \textbf{\textit{horash:minutosm:segundoss}}.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+Um único inteiro \textbf{x}.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Imprima o tempo lido em segundos, convertido para \textit{horash:minutosm:segundoss}, conforme 
+a tabela abaixo.
+\newline \newline
+\textbf{{\large Nota}} \newline
+Uma das formas de imprimir mais de um valor/variável com textos no print é separá-los por vírgulas. \newline
+\textbf{Exemplo: print(horas, “h:”, minutos, “m:”, tempo, “s”)}. Nesse caso seria apresentado na tela: 
+\textbf{1 h: 1 m: 1 s} (supondo, é claro, que as três variáveis tenham o valor 1). Isso acontece porque os valores/textos do print são separados (separamos valores e textos usando a vírgula) por um espaço em branco, por padrão. Entretanto, é possível mudar o separador padrão para o que quisermos, usando a \textit{keyword sep}: \newline
+\textbf{print(horas, "h:", minutos, "m:", tempo, "s", sep='')}. Nesse caso, seria apresentado na tela: \textbf{1h:1m:1s}.
+\newline \newline
+\textbf{{\large Dica}} \newline
+Existe um operador em Python que faz a divisão inteira entre dois números.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+	556 & 0h:9m:16s \\ \hline
+	1 & 0h:0m:1s \\ \hline
+	140153 & 38h:55m:53s \\ \hline
+	\end{tabular}
+	\caption{Questão F}
+	\label{tabela6}
+\end{table}
+
+\newpage % Questão G
+\begin{center}
+\textbf{{\Large Questão G - Troco em Cédulas}}
+\end{center}
+\vspace{5pt}
+Leia um valor inteiro. A seguir, calcule o menor número de notas possíveis  (cédulas) no qual o valor pode ser decomposto. As notas consideradas são de 100, 50, 20, 10, 5, 2 e 1. A seguir mostre o \textbf{valor lido} e a relação de notas necessárias.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada contém um valor inteiro \textbf{N}.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Imprima o valor lido e, em seguida, a quantidade mínima de notas de cada tipo necessárias, conforme o exemplo fornecido abaixo.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+	576 & 
+	\begin{tabular}{l}
+	576 \\ 5 nota(s) de R\$ 100,00 \\ 1 nota(s) de R\$ 50,00 \\ 1 nota(s) de R\$ 20,00 \\
+	0 nota(s) de R\$ 10,00 \\ 1 nota(s) de R\$ 5,00 \\ 0 nota(s) de R\$ 2,00 \\ 1 nota(s) de R\$ 1,00
+	\end{tabular} \\ \hline
+	
+	11257 & 
+	\begin{tabular}{l}
+	11257 \\ 112 nota(s) de R\$ 100,00 \\ 1 nota(s) de R\$ 50,00 \\ 0 nota(s) de R\$ 20,00 \\
+	0 nota(s) de R\$ 10,00 \\ 1 nota(s) de R\$ 5,00 \\ 1 nota(s) de R\$ 2,00 \\ 0 nota(s) de R\$ 1,00
+	\end{tabular} \\ \hline
+	
+	99 & 
+	\begin{tabular}{l}
+	99 \\ 0 nota(s) de R\$ 100,00 \\ 1 nota(s) de R\$ 50,00 \\ 2 nota(s) de R\$ 20,00 \\
+	0 nota(s) de R\$ 10,00 \\ 1 nota(s) de R\$ 5,00 \\ 2 nota(s) de R\$ 2,00 \\ 0 nota(s) de R\$ 1,00
+	\end{tabular} \\ \hline
+	\end{tabular}
+	\caption{Questão G}
+	\label{tabela7}
+\end{table}
+\end{document}
