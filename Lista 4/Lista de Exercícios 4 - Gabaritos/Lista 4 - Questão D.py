@@ -1,7 +1,7 @@
 """ Com raciocínio semelhante à questão 3, se o número digitado for par então
-retornaremos a soma de n e chamamos a função novamente passando o próximo par
-menor que n. Caso o número digitado for ímpar, retornaremos o próximo par p
-menor que n e chamamos a função passando o próximo par menor que p.
+retornaremos a soma de n-2 e chamamos a função novamente passando n-2. Caso o
+número digitado for ímpar, retornaremos o próximo par p que seja igual a n - 2e
+chamamos a função passando p.
 Note que depois que verificarmos se o n digitado pelo usuário é par, todas as
 chamadas da função terão como parâmetro um número par.
 Continuaremos essas chamadas até que n seja 0, onde terminamos o somatório """
