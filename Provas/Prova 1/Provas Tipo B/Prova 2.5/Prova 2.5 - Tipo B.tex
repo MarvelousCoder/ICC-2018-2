@@ -34,27 +34,26 @@
 \end{itemize}
 \newpage % Questão A 
 \begin{center}
-\textbf{{\Large Questão B - Mínimo Múltiplo Comum}}
+\textbf{{\Large Questão B - Somatório Ímpares}}
 \end{center}
 \vspace{5pt}
-O mínimo múltiplo comum (mmc) de dois inteiros a e b é o menor inteiro positivo que é múltiplo simultaneamente de a e de b. Se não existir tal inteiro positivo, por exemplo, se a = 0 ou b = 0, então \textit{\textbf{mmc(a,b)}} é zero por definição. Sabemos que $a\cdot b = mmc(a,b) \cdot mdc(a,b)$.
+Faça um programa que leia um valor \textbf{N}, depois leia \textbf{N} valores \textbf{k}.
 \newline \newline
 \textbf{{\large Entrada}} \newline
-A entrada contém apenas valores inteiros, sendo \textbf{\textit{N}} $>$ \textbf{\textit{0}} e \textbf{\textit{A,B}} $\geq$ \textbf{\textit{0}}. Na primeira linha será lido o valor \textbf{N} e nas próximas \textbf{N} linhas serão lidos os valores \textbf{A} e \textbf{B}, separados por espaço.
+A entrada consiste apenas de valores inteiros, sendo \textbf{N} $>$ \textbf{0}. A primeira linha de entrada conterá um inteiro \textbf{N}, nas próximas \textbf{N} linhas serão lidos valores \textbf{k}. O primeiro \textbf{k} da entrada é maior ou igual a zero.
 \newline \newline
 \textbf{{\large Saída}} \newline
-Para cada valor \textbf{\textit{A}} e \textbf{\textit{B}} lidos, calcule e imprima seu mmc. Ao final, imprima a média dos mínimos múltiplos comuns (com duas casas decimais após a vírgula) dos mmcs calculados.
+Para cada \textbf{k} $\geq$ \textbf{0} lido imprima na tela a soma \textbf{S} de todos os números ímpares de 0 até \textbf{k}, incluindo o \textbf{k}, se for o caso. Caso \textbf{k} seja menor que 0 apenas imprima na tela a mensagem: ``erro''. Ao final imprima a menor soma \textbf{S} e a média das somas \textbf{S} calculadas.
 \newline
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Exemplo de Entrada}                                       & \textbf{Exemplo de Saída}                             \\ \hline
-\begin{tabular}[c]{@{}l@{}}2 \\ 4 8\\ 3 5\end{tabular}   & \begin{tabular}[c]{@{}l@{}}8\\ 15\\ 11.50 \end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}2 \\ 0 5\\ 5 0\end{tabular}  & \begin{tabular}[c]{@{}l@{}}0\\ 0\\ 0.00\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}3 \\ 12 8 \\ 3 4\\ 0 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}24\\ 12 \\ 0 \\ 12.00\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}1 \\ 8 24\end{tabular} & \begin{tabular}[c]{@{}l@{}}24\\ 24.00\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}2 \\ 4 2\\8 10\end{tabular} & \begin{tabular}[c]{@{}l@{}}4\\ 40 \\ 22.00\end{tabular} \\ \hline
+\textbf{Exemplo de Entrada}                                & \textbf{Exemplo de Saída}                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ 10\\ 4\\ -1\end{tabular}    & \begin{tabular}[c]{@{}l@{}}25\\ 4\\ erro\\ 4\\ 14.50\end{tabular}   \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 6\\ 2\\ 4\\ -1\end{tabular} & \begin{tabular}[c]{@{}l@{}}9\\ 1\\ 4\\ erro\\ 1\\ 4.67\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 3\\ 4\\ 5\\ -8\end{tabular} & \begin{tabular}[c]{@{}l@{}}4\\ 4\\ 9\\ erro\\ 4\\ 5.67\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 2\end{tabular}              & \begin{tabular}[c]{@{}l@{}}1\\ 1\\ 1.00\end{tabular}                \\ \hline
 \end{tabular}
 \caption{Questão B}
 \end{table}
