@@ -26,10 +26,10 @@
 
 \textbf{{\large Observações:}}
 \begin{itemize}
-	\item As listas de exercícios serão corrigidas por um corretor automático, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
-	\item As questões estão em ordem de dificuldade. Cada lista possui 7 exercícios, sendo 1 questão fácil, 3 ou 4 médias e 2 ou 3 difíceis.
-	\item Assim como as listas, as provas devem ser feitas em Python 3.5. Use essa versão do Python.
-	\item Leia com atenção e faça exatamente o que está sendo pedido.
+	\item As listas de exercícios serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item As questões estão em \textbf{ordem de dificuldade}. Cada lista possui 7 exercícios, sendo 1 questão fácil, 3 ou 4 médias e 2 ou 3 difíceis.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
 \end{itemize}
 \newpage % Questão A 
 \begin{center}
@@ -43,7 +43,7 @@ Faça um programa que peça ao usuário para informar dois números reais, confo
 Leia 2 números reais do teclado, um por linha.
 \newline \newline
 \textbf{{\large Saída}} \newline
-Imprima na tela \textbf{\textit{media}}, onde \textbf{\textit{media}} é um real com duas casas decimais que representa a média dos dois reais lidos do teclado conforme exemplo abaixo.
+Imprima na tela \textbf{\textit{media}}, onde \textbf{\textit{media}} é um real com duas casas decimais que representa a média dos dois reais lidos do teclado, conforme exemplo abaixo.
 \newline
 \begin{table}[H]
 	\centering
@@ -190,7 +190,7 @@ $$\textrm{m} = \dfrac{1x_1 + 2x_2 + 3x_3 + 4x_4 + 5x_5}
 	\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
 	\begin{tabular}{l}
 	4 \\ 4 \\ 4 \\ 4 \\ 4
-	\end{tabular} & 4.0000 \\ \hline
+	\end{tabular} & 4.000 \\ \hline
 	\begin{tabular}{l}
 	0 \\ 1 \\ 2 \\ 3 \\ 4
 	\end{tabular} & 2.667 \\ \hline
@@ -220,7 +220,7 @@ a tabela abaixo.
 Uma das formas de imprimir mais de um valor/variável com textos no print é separá-los por vírgulas. \newline
 \textbf{Exemplo: print(horas, “h:”, minutos, “m:”, tempo, “s”)}. Nesse caso seria apresentado na tela: 
 \textbf{1 h: 1 m: 1 s} (supondo, é claro, que as três variáveis tenham o valor 1). Isso acontece porque os valores/textos do print são separados (separamos valores e textos usando a vírgula) por um espaço em branco, por padrão. Entretanto, é possível mudar o separador padrão para o que quisermos, usando a \textit{keyword sep}: \newline
-\textbf{print(horas, "h:", minutos, "m:", tempo, "s", sep='')}. Nesse caso, seria apresentado na tela: \textbf{1h:1m:1s}.
+\textbf{print(horas, ``h:'', minutos, ``m:'', tempo, ``s'', sep=``'')}. Nesse caso, seria apresentado na tela: \textbf{1h:1m:1s}.
 \newline \newline
 \textbf{{\large Dica}} \newline
 Existe um operador em Python que faz a divisão inteira entre dois números.
