@@ -1,0 +1,257 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[htb]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Lista de Exercícios 5} \\
+	\vspace{9pt}
+	{\large Strings}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As listas de exercícios serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como ``Informe a primeira entrada''. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item As questões estão em \textbf{ordem de dificuldade}. Cada lista possui 7 exercícios, sendo 1 questão fácil, 3 ou 4 médias e 2 ou 3 difíceis.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Ataque em Roma}}
+\end{center}
+\vspace{5pt}
+A equipe de inteligência Romana tem obtido sucesso interceptando as mensagens do Império Otomano, mas elas são muito suspeitas, pois não faziam sentido algum. Até que Aristolfo descobriu o segredo adversário: a real mensagem se esconde no terceiro caractere de cada uma das palavras. Por exemplo:
+\begin{center} \textit{An\textbf{d}ré tr\textbf{e}tou ca\textbf{b}um br\textbf{o}cado tr\textbf{a}ns pu\textbf{s}}\end{center}
+Vira:
+\begin{center} \textit{\textbf{deboas}}\end{center}
+Até então, este trabalho estava sendo feito à mão. Mas como você é muito
+inteligente, Aristolfo pediu que escrevesse um programa que resolvesse isso
+para ele.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste em uma frase criptografada usando o método descrito acima, contendo apenas palavras de três letras ou mais.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve escrever uma única linha na saída, contendo a real mensagem do Império Otomano.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                         & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}André tretou cabum brocado trans\\ pus\end{tabular}                      & deboas                    \\ \hline
+\begin{tabular}[c]{@{}l@{}}Esparta prestigia derrotas trincadas\\ legais problemáticas\end{tabular} & perigo                    \\ \hline
+\end{tabular}
+	\caption{Questão A}
+	\label{tabela1}
+\end{table}
+
+\newpage % Questão B
+\begin{center}
+\textbf{{\Large Questão B - Brincadeira de Criança}}
+\end{center}
+\vspace{5pt}
+André adora brincar com seus amiguinhos usando a língua do ‘p’, mas nem
+sempre eles conseguem reproduzir com tanta maestria as frases trocando
+todas as consoantes por ‘p’. \newline \newline
+Para ajudar André a não perder mais tempo explicando para os seus
+coleguinhas como é a pronúncia correta de tão sublime linguagem, você
+decidiu escrever um programa que processa uma frase e retorna ela
+traduzida.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste em uma única linha contendo a frase a ser traduzida. A
+frase pode ser de um tamanho arbitrário e não conterá símbolos especiais.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve escrever uma única linha na saída, contendo a frase com
+todas as suas consoantes substituídas pela letra ‘p’.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                         & \textbf{Exemplo de Saída}                                                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}André tretou cabum brocado trans\\ pus\end{tabular}                      & \begin{tabular}[c]{@{}l@{}}Apppé ppepou papup ppopapo \\ ppapp pup\end{tabular}                     \\ \hline
+\begin{tabular}[c]{@{}l@{}}Esparta prestigia derrotas trincadas\\ legais problemáticas\end{tabular} & \begin{tabular}[c]{@{}l@{}}Eppappa ppeppipia peppopap\\ ppippapap pegaip ppoppepápipap\end{tabular} \\ \hline
+\end{tabular}
+	\caption{Questão B}
+	\label{tabela2}
+\end{table}
+
+\newpage % Questão C
+\begin{center}
+\textbf{{\Large Questão C - Cruzeiro}}
+\end{center}
+\vspace{5pt}
+Andreia e seu amigo, Brocado, estão jogando um jogo que eles mesmo
+inventaram, o Cruzeiro. Neste jogo, cada um deles escreve uma palavra
+escondido num papel, e depois as comparam. Ganha quem tiver escrito a
+palavra que, em ordem alfabética (\textit{lexicográfica}) vem ``depois''.
+\newline \newline
+Por exemplo, se Andreia joga ``ornitorrinco'', mas Brocado joga ``ornitopata'',
+vence Andreia, pois a letra ‘r’ vem depois do ‘p’.
+\newline \newline
+Porém, depois de um tempo, as duas crianças cansam de ficar tentando
+``calcular'' qual das duas palavras vence. Você, sendo um inteligente
+programador, se dispõe a ajudá-las, escrevendo um programa que responde quem é o vencedor. 
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consistem em duas strings diferentes \textbf{A} e \textbf{B} separadas por espaço,
+relativas às palavras submetidas por Andreia e Brocado, respectivamente.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve escrever uma única linha, contendo apenas um caractere
+‘A’ ou ‘B’, com a inicial do nome do vencedor.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+sino cabeça                 & A                         \\ \hline
+lontra Pele                 & B                         \\ \hline
+\end{tabular}
+	\caption{Questão C}
+	\label{tabela3}
+\end{table}
+
+\newpage % Questão D
+\begin{center}
+\textbf{{\Large Questão D - Discussão Interminável}}
+\end{center}
+\vspace{5pt}
+Panda e Urso estão discutindo para saber qual letra é a mais recorrente em
+textos clássicos, ‘p’ ou ‘u’. \newline \newline
+Sabendo que você é um experiente programador, Panda e Urso vêm pedir
+seu auxílio para dar um fim a esta disputa.
+\newline \newline
+\textbf{{\large Entrada}} \newline 
+A primeira linha da entrada contém apenas um inteiro \textbf{\textit{N}}, indicando o número
+de linhas do texto. Cada uma das seguintes linhas (onde o fim é determinado pelo ponto final) contém uma linha do texto,
+que não contém caracteres acentuados.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve escrever na saída dois inteiros \textbf{P} e \textbf{U}, correspondentes
+ao número de ocorrências das letras ‘p’ e ‘u’, respectivamente.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                                                                                                                                                  & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ Lorem ipsum dolor sit amet, \\ consectetur adipiscing elit.\\ Nam vestibulum fringilla lacus sed\\ tincidunt.\\ Pellentesque pellentesque feugiat \\ lobortis.\end{tabular}                                                   & 4 9                       \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ Era uma vez um abacate, que estava \\ indo dormir na casa da namorada, \\ mas la tinha um panda de pelucia.\\ Entao, o abacate nao estava \\ conseguindo dormir porque achou\\ que o panda estava encarando ele.\end{tabular} & 4 9                       \\ \hline
+\end{tabular}
+	\caption{Questão D}
+	\label{tabela4}
+\end{table}
+
+\newpage % Questão E
+\begin{center}
+\textbf{{\Large Questão E - Erro de Português}}
+\end{center}
+\vspace{5pt}
+Seu sobrinho Joberto está aprendendo a escrever e está tendo dificuldade de
+lembrar que deve usar letra maiúscula no início da frase. \newline \newline
+Como um bom tio que é, e um exímio programador, você decide que a melhor
+abordagem é escrever um programa que faça as correções automaticamente.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste de uma única linha de texto, contendo uma ou múltiplas
+frases, separadas por ponto.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve capitalizar a primeira letra da string, bem como a primeira
+letra de cada frase separada por ponto.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                                           & \textbf{Exemplo de Saída}                                                                                                                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}quando eu fui ganhar um abraço, eu\\ não esperava. que ele fosse ser tão\\ sincero.\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}Quando eu fui ganhar um abraço, eu\\ não esperava. Que ele fosse ser tão sincero.\end{tabular}                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}abacates podem ser verdes. mas\\ também existem abacates marrons.\\ E não se esqueça dos que não são\\ roxos.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Abacates podem ser verdes. Mas\\ também existem abacates marrons.\\ E não se esqueça dos que não são\\ roxos.\end{tabular} \\ \hline
+\end{tabular}
+	\caption{Questão E}
+	\label{tabela5}
+\end{table}
+
+\newpage % Questão F
+\begin{center}
+\textbf{{\Large Questão F - Freguês}}
+\end{center}
+\vspace{5pt}
+John é garçom de um restaurante cujo prato de maior sucesso é a sopa de
+letrinhas. Para passar o tempo, ele fica procurando as letras do seu nome na
+sopa que entrega para os clientes. \newline \newline
+Enquanto fazia isso, percebeu que, dentre as sopas que os clientes deixavam
+para trás ao sair, existia um padrão nas letrinhas restantes.
+As letras do seu nome sempre eram rejeitadas! \newline \newline
+Frustrado e levemente assustado com a descoberta, John pede para que
+você escreva um programa para se certificar que não está ficando maluco.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha da entrada consiste numa string contendo todas as letras da
+sopa de letras entregue. Note que poderá haver repetição. \newline	
+A segunda linha, por sua vez, consiste numa string contendo todas as letras
+da sopa abandonada pelo cliente.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve imprimir na saída dois inteiros \textbf{\textit{I}}, \textbf{\textit{O}}, correspondendo ao número de letras \textbf{J}, \textbf{O}, \textbf{H} ou \textbf{N} que foram comidas pelo cliente e que foram deixadas para trás, respectivamente.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                   & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}ABCDEFGHIJKLMNOPQRSTUVWX\\ YZ\\ ABCDE\end{tabular} & 4 0                       \\ \hline
+\begin{tabular}[c]{@{}l@{}}ABCDEFGHIJKLMNOPQRSTUVWX\\ YZ|\\ JOHN\end{tabular} & 0 4                       \\ \hline
+\end{tabular}
+	\caption{Questão F}
+	\label{tabela6}
+\end{table}
+
+\newpage % Questão G
+\begin{center}
+\textbf{{\Large Questão G - Gradiente}}
+\end{center}
+\vspace{5pt}
+Raphael está desenvolvendo um analisador de gradiente léxico para o seu mais novo experimento com Inteligência Artifical e processamento de texto em linguagem natural. Para isso, ele precisa saber, com precisão, se os caracteres de uma string são maiúsculos, minúsculos, espaços em branco ou dígitos numéricos. \newline \newline
+Sabendo que você é um exímio programador, Raphael pediu sua ajuda nesta tarefa. \newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste em uma única linha de texto, podendo conter letras maiúsculas, minúsculas, espaços em branco e dígitos numéricos, mas não caracteres especiais.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve gerar uma única linha de texto, mapeando os caracteres
+da entrada para \textbf{U}, para letras maiúsculas, \textbf{L}, para letras minúsculas, \textbf{W}, para
+espaços em branco e \textbf{D} para dígitos numéricos.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}   & \textbf{Exemplo de Saída}                                                \\ \hline
+iwHeJokl 2387E23ei jDiae      & LLULULLLWDDDDUDDLLWLULLL                                                 \\ \hline
+iw iWw potato JJJJklo 123 456 & \begin{tabular}[c]{@{}l@{}}LLWLULWLLLLLLWUUUULLLWDDD\\ WDDD\end{tabular} \\ \hline
+\end{tabular}
+	\caption{Questão G}
+	\label{tabela7}
+\end{table}
+\end{document}
