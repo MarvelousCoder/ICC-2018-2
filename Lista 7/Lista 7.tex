@@ -1,0 +1,426 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+\usepackage{textcomp}
+
+
+\begin{document}
+\begin{figure}[htb]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Lista de Exercícios 7} \\
+	\vspace{9pt}
+	{\large Tuplas e Dicionários}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As listas de exercícios serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como ``Informe a primeira entrada''. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item As questões estão em \textbf{ordem de dificuldade}. Esta lista possui \textbf{9 exercícios}, cada questão possui uma indicação para o tema da questão, tuplas ou dicionários. Isso deve facilitar a resolução de cada uma delas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Borderline (Dicionários)}}
+\end{center}
+\vspace{5pt}
+O Transtorno de Personalidade Limítrofe (Borderline Personality Disorder, em
+inglês), é um transtorno de personalidade que se caracteriza pela abrupta
+mudança de comportamento, impulsividade e instabilidade de afetos, e é muitas
+vezes confundida com bipolaridade. \newline \newline
+Joana tem uma variante de borderline tão rara que só existe em questões de listas
+de exercícios. Ela tem um conjunto de palavras críticas que desencadeiam uma
+alteração entre seus arquétipos de personalidades. \newline \newline
+Tristes por usar essas palavras sem querer durante conversas do dia-a-dia e ver
+sua amiga explodindo com eles, os amigos de Joana pediram a você que
+escrevesse um programa que ajudasse-os a melhor controlar a situação.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha da entrada consiste de um inteiro \textbf{N}, o número de palavras críticas
+para Joana. As próximas \textbf{N} linhas contém, cada uma, duas strings \textbf{T} e \textbf{P} separadas
+por espaço, a palavra crítica e a personalidade que ela desencadeia,
+respectivamente. \newline \newline
+A última linha da entrada consiste de uma string, a frase que os amigos de Joana
+querem falar. Considere que os sinais de pontuação estarão sempre isolados com
+espaços.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve imprimir uma única linha contendo ``\textbf{Tudo bem!}'' caso a frase
+não contenha nenhuma palavra crítica, ou os nomes das personalidades que serão
+desencadeadas, separadas por espaço, na ordem de input.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ boldo explosiva\\ tampa chorosa\\ beijo calorosa\\ Você pôs a tampa no boldo ?\end{tabular} & chorosa explosiva         \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ dedos animada\\ tinta criativa\\ Quantos irmãos você tem , mesmo ?\end{tabular}             & Tudo bem!                 \\ \hline
+\end{tabular}
+\caption{Questão A}
+\label{tabela0}
+\end{table}
+
+\newpage % Questão B
+%	\begin{center}
+%	\textbf{{\Large Questão B - Carros (Dicionário)}}
+%	\end{center}
+%	\vspace{5pt}
+%	A1A é um lava-jato na região de Albuquerque que recebe um grande volume de
+%	carros todos os dias. Seu dono, Bogdan Wolynetz, tem tido problemas recentes
+%	com alguns de seus funcionários e precisa de alguma forma de gerenciar os carros
+%	sujos e necessitados de cera de seus clientes. \newline \newline
+%	Para isso, ele decidiu contratar um desenvolvedor python, você, para criar um
+%	sistema de gerenciamento sólido para seu estabelecimento.
+%	\newline \newline
+%	\textbf{{\large Entrada}} \newline
+%	Cada linha da entrada começa com uma letra `\textbf{E}', `\textbf{R}' ou `\textbf{F}', indicando o tipo de
+%	transação a ser realizada. \newline
+%	Se a transação for do tipo ‘\textbf{E}’ \textbf{(entrar)}, o resto da linha conterá o primeiro nome do
+%	cliente (sem espaços), e qual o tipo de serviço a ser realizado (‘\textbf{cera}’ ou ‘\textbf{lavagem}’).
+%	Caso a transação for ‘\textbf{R}’ \textbf{(retirar)}, o resto da linha conterá somente o primeiro nome
+%	do cliente a ter o carro retirado. \newline
+%	Por fim, a última linha da entrada será sempre do tipo ‘\textbf{F}’, indicando o fechamento
+%	do lava-jato.
+%	\newline \newline
+%	\textbf{{\large Saída}} \newline
+%	Para cada transação do tipo ‘\textbf{R}’, seu programa deve imprimir qual o último serviço
+%	que foi realizado no carro em questão. Caso não houver nenhum carro cadastrado
+%	sob o nome requisitado, imprimir `\textbf{Usuário não cadastrado}'.
+%	\newline
+%	\begin{table}[H]
+%	\centering
+%	\begin{tabular}{|l|l|}
+%	\hline
+%	\textbf{Exemplo de Entrada}                                                                                                          & \textbf{Exemplo de Saída}                                                                             \\ \hline
+%	\begin{tabular}[c]{@{}l@{}}E Walter Cera\\ R Heisenberg\\ R Walter\\ F\end{tabular}                                                  & \begin{tabular}[c]{@{}l@{}}Usuário não cadastrado\\ cera\end{tabular}                                 \\ \hline
+%	\begin{tabular}[c]{@{}l@{}}R Roberto\\ R André\\ E André lavagem\\ E Rafael cera\\ E André cera\\ R André\\ R André\\ F\end{tabular} & \begin{tabular}[c]{@{}l@{}}Usuário não cadastrado\\ Usuário não cadastrado\\ cera\\ cera\end{tabular} \\ \hline
+%	\end{tabular}
+%	\caption{Questão B}
+%	\label{tabela2}
+%	\end{table}
+
+\newpage % Questão C %\textbf{\texttrademark} - ™
+\begin{center}
+\textbf{{\Large Questão B - Depita (Dicionários)}} 
+\end{center} 
+	\vspace{5pt} 
+	Reginalda quer abrir uma startup revolucionária no Vale do Silício, a Depita, que irá
+	alugar depósitos de marmitas. É uma tecnologia revolucionária: quando você
+	chega para trabalhar, pela manhã, deposita seu almoço em uma Depita\textbf{\texttrademark}, e saca
+	só mais tarde, quando for comer. \newline \newline
+	Porém, Reginalda não tem muita experiência desenvolvendo, então decidiu
+	terceirizar a parte de software da sua nova empresa. Você, sabendo da incrível
+	oportunidade de poder revolucionar a indústria, logo se prontificou para resolver o
+	problema de Reginalda pela modesta quantia de 3 mil dólares.
+	\newline \newline
+	\textbf{{\large Entrada}} \newline
+	A primeira linha da entrada consiste de um inteiro \textbf{N}, o número de iterações
+	subsequentes. As próximas \textbf{N} linhas contêm, cada uma, uma string sem espaços
+	\textbf{S}, o nome do depositante, e uma string que pode conter espaços \textbf{D}, a descrição da
+	marmita depositada. \newline \newline
+	Se o mesmo depositante realizar o depósito múltiplas vezes, somente a última
+	instância deve ser contabilizada, pois a Depita\textbf{\texttrademark} é programada para jogar fora a
+	marmita anterior.
+	\newline \newline
+	\textbf{{\large Saída}} \newline
+	A primeira linha da saída deve conter um inteiro \textbf{J}, o número de depositantes
+	diferentes. As próximas \textbf{J} linhas devem conter, cada uma, a descrição de cada uma das
+	marmitas depositadas, ordenadas em ordem alfabética do nome do depositante.
+	\newline
+	\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textbf{Exemplo de Entrada}                                                                                                  & \textbf{Exemplo de Saída}                                                                   \\ \hline
+	\begin{tabular}[c]{@{}l@{}}3\\ João Bife do oião\\ Ricardo Salsicha recheada com queijo\\ João Cuscuz com leite\end{tabular} & \begin{tabular}[c]{@{}l@{}}2\\ Cuzcuz com leite\\ Salsicha recheada com queijo\end{tabular} \\ \hline
+	\begin{tabular}[c]{@{}l@{}}2\\ Zé abacates\\ Alberto sashimi à passarinho\end{tabular}                                       & \begin{tabular}[c]{@{}l@{}}2\\ sashimi à passarinho\\ abacates\end{tabular}                 \\ \hline
+	\end{tabular}
+	\caption{Questão B}
+	\label{tabela1}
+\end{table}
+
+\newpage % Questão C
+\begin{center}
+\textbf{{\Large Questão C - Deus Ex Machina (Tuplas)}}
+\end{center}
+\vspace{5pt}
+\textit{Deus ex Machina} é um artifício de escrita utilizado principalmente quando o
+escritor não sabe como resolver um problema que ele mesmo criou. Ele
+introduz um elemento que, convenientemente, guia o protagonista para a
+solução do problema. Um clássico exemplo de uso extensivo de Deus ex
+Machina é o Mestre dos Magos, no desenho Caverna do Dragão. \newline \newline
+Um amigo escritor seu está tendo dificuldade pois está criando problemas
+demais para os seus personagens resolverem. Você, então, sugere que ele
+introduza o \textit{Deus ex Machina} perfeito, o qual você gerará usando python.
+\newline \newline
+\textbf{{\large Entrada}} \newline 
+A primeira linha da entrada consiste em um inteiro \textbf{N}, o número de problemas
+a serem resolvidos. \newline
+As próximas \textbf{N} linhas consistem, cada uma, de uma string sem espaços \textbf{P}, o
+nome do problema, uma string sem espaços \textbf{S}, a solução do problema \textbf{P}, e
+um inteiro \textbf{D}, a dificuldade (de 0 a 10) de resolver o problema.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve imprimir uma única linha contendo as soluções \textbf{S}
+concatenadas na ordem de dificuldade, da maior para a menor. Quando
+houverem dois problemas com a mesma dificuldade, mantenha a ordem de
+input.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                                                                                            & \textbf{Exemplo de Saída}                                                                                              \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ voldemort\_imortal reliquias\_da\_morte 8\\ grupo\_perdido mestre\_dos\_magos 4\end{tabular}                                                                            & \begin{tabular}[c]{@{}l@{}}reliquias\_da\_mortemestre\_dos\_\\ magos\end{tabular}                                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ jovem\_carente muitos\_beijos 1\\ falta\_dinheiro ligacao\_da\_agencia 7\\ chao\_molhado sapatos\_com\_espinhos 6\\ ceu\_pegando\_fogo extintor\_magico 10\end{tabular} & \begin{tabular}[c]{@{}l@{}}extintor\_magicoligacao\_da\_age\\ nciasapatos\_com\_espinhosmuit\\ os\_beijos\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão C}
+\label{tabela2}
+\end{table}
+
+\newpage % Questão E
+\begin{center}
+\textbf{{\Large Questão D - Estrada (Tuplas)}}
+\end{center}
+\vspace{5pt}
+Cunegonde é uma jovem que tem dificuldade em se localizar dentro da
+cidade onde mora. Por sorte, ela mora na Cartésia, uma cidade em que todas
+as quadras são identificadas por coordenadas em um plano cartesiano que
+atravessa a cidade. \newline \newline
+Cansada de não saber qual direção tomar para voltar para casa, Cunegonde
+trouxe seu dilema ao melhor programador que conhece, você. Ela pediu para
+escrever um programa que, dada a descrição dos seus movimentos desde
+que saiu de casa, saiba quais os movimentos mínimos para que ela regresse.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha da entrada consiste de um inteiro \textbf{N}, o número de
+movimentos que Cunegonde performou após sair de casa. \newline
+As próximas \textbf{N} linhas consistem de um caractere \textbf{D} e um inteiro positivo \textbf{Q},
+respectivamente, a direção (`N'orte, `S'ul, ‘L'este ou ‘O'este) e a quantidade
+de blocos que Cunegonde andou nesta direção.
+\textbf{{\large Saída}} \newline
+Seu programa deve imprimir quatro inteiros \textbf{N}, \textbf{S}, \textbf{L}, \textbf{O}, nesta ordem, a
+quantidade mínima de quadras que Cunegonde precisa andar para retornar
+para a sua casa, na quadra de início.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                   & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}6\\ N 4\\ O 1\\ S 8\\ O 3\\ L 2\\ N 7\end{tabular} & 0 3 2 0                   \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ S 10\\ O 10\end{tabular}                       & 10 0 10 0                 \\ \hline
+\end{tabular}
+\caption{Questão D}
+\label{tabela3}
+\end{table}
+
+\newpage % Questão F
+\begin{center}
+\textbf{{\Large Questão E - Enumeração (Dicionários)}}
+\end{center}
+\vspace{5pt}
+Gilsernardo é um curioso bibliotecário que deseja catalogar todas as obras de
+Shakespeare. Desde os títulos, em ordem lexicográfica, até cada uma das
+palavras em cada um dos livros. Só que ele percebeu que é palavra demais para
+ele organizar no seu bloco de notas (884.647, para ser mais exato), então ele
+decidiu chamar o seu amigo programador, você, para auxiliá-lo nesta atividade. \newline \newline
+Seu trabalho é escrever um programa que, dado um trecho de obra literária,
+organize-a por frequência de palavras.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste de apenas uma linha, a obra em questão. Perceba que todas as
+palavras estarão separadas por espaços, mas pode haver pontuação e variação de
+capitalização, que não deverão ser levados em conta na contagem. Por exemplo,
+``abacate'', ``Abacate'', ``ABACATE'', ``abacate.'' e demais variantes sempre contam
+como a mesma palavra.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve imprimir múltiplas linhas. Cada linha deve conter uma string \textbf{W}
+e um inteiro \textbf{Q}, a palavra capitalizada e sua quantidade no trecho fornecido,
+respectivamente. A saída deve estar em ordem de \text{Q} maior para \textbf{Q} menor.
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                                                                        & \textbf{Exemplo de Saída}                                                                                                                                                                                                    \\ \hline
+\begin{tabular}[c]{@{}l@{}}Come, night, come, Romeo, come, thou\\ day in night, For thou wilt lie upon the\\ wings of night Whiter than new snow on a\\ raven's back.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Come 3\\ Night 3\\ Thou 2\\ Romeo 1\\ Day 1\\ In 1\\ For 1\\ Wilt 1\\ Lie 1\\ Upon 1\\ The 1\\ Wings 1\\ Of 1\\ Whiter 1\\ Than 1\\ New 1\\ Snow 1\\ On 1\\ A 1\\ Raven’s 1\\ Back 1\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}Oh, I have bought the mansion of love, But\\ not possessed it, and though I am sold, Not\\ yet enjoyed.\end{tabular}                                    & \begin{tabular}[c]{@{}l@{}}I 2\\ Not 2\\ Oh 1\\ Have 1\\ Bought 1\\ The 1\\ Mansion 1\\ Of 1\\ Love 1\\ But 1\\ Possessed 1\\ It 1\\ And 1\\ Though 1\\ Am 1\\ Sold 1\\ Yet 1\\ Enjoyed 1\end{tabular}                       \\ \hline
+\end{tabular}
+\caption{Questão E}
+\label{tabela4}
+\end{table}
+
+\newpage % Questão F
+\begin{center}
+\textbf{{\Large Questão F - Filosofia (Tuplas)}}
+\end{center}
+\vspace{5pt}
+Aristônio é um filósofo grego daqueles que usa toga. Ultimamente, Aristônio
+tem desenvolvido teorias em quantidades industriais, sobre os mais variados
+temas: o Universo, a Vida, e Todas as Coisas. \newline \newline
+Porém, existe um lado negativo em ser um filósofo no século XXI: se você
+corre pelado na rua gritando ‘Eureka', você acaba preso. E toda vez que
+Aristônio é preso, ele acaba perdendo todas as suas teorias. \newline \newline	
+Frustrado em ter que escrever tudo novamente, toda vez, Aristônio decidiu
+que iria aderir às novas tecnologias e guardar tudo na nuvem. Porém, ele
+sempre se perde em tantos arquivos, e precisa da ajuda de um programador
+para organizar seus pensamentos para ele. E é aí que você entra na história.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha da entrada contém um inteiro \textbf{N}, o número de trabalhos que
+Aristônio escreveu. \newline
+As próximas \textbf{N} linhas contêm, cada uma, uma string \textbf{N}, o caminho do arquivo
+a ser indexado, e quatro strings \textbf{T1}, \textbf{T2}, \textbf{T3} e \textbf{T4}, separadas por espaço, tags que identificam o arquivo. \newline
+A última linha da entrada é a pesquisa do Aristônio, e contém um número
+arbitrário de strings, as tags dos arquivos que ele quer encontrar.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve procurar as tags que o Aristônio está requisitando na
+última linha da entrada e imprimir cada um dos caminhos encontrados em
+linhas separadas, na ordem de input.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                                                                                          & \textbf{Exemplo de Saída}                                                                          \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ tratado/inteligencia.pdf int tratado x ruim\\ ensaio/cegueira.doc visao ensaio y bom\\ teoria/caverna.jpg teoria visao z bom\\ visao\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}ensaio/cegueira.doc\\ teoria/caverna.jpg\end{tabular}                   \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ nihon/accioly.pages ota abacate rio 10\\ brazil/renato.form ota aba n cate\\ code/rafael.cpp 10 20 30 40\\ sha256/md5.py ololo secret abacate x\\ 10 ota\end{tabular} & \begin{tabular}[c]{@{}l@{}}nihon/accioly.pages\\ brazil/renato.form\\ code/rafael.cpp\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão F}
+\label{tabela5}
+\end{table}
+
+\newpage % Questão G
+\begin{center}
+\textbf{{\Large Questão G - Função de Ackermann(Dicionário)}}
+\end{center}
+\vspace{5pt}
+Raphael é um jovem aluno de computação que anda estudando
+complexidade de algoritmos, e esbarrou na função de Ackermann. Na teoria da computabilidade, a \textbf{Função de Ackermann}, nomeada por \textit{Wilhelm Ackermann}, é um dos mais simples e recém-descobertos exemplos de uma função computável que não são funções recursivas primitivas. Todas as funções recursivas primitivas são totais e computáveis, mas a Função de Ackermann mostra que nem toda função total-computável é recursiva primitiva. \newline \newline
+Esta função é conhecida pela sua capacidade de crescer absurdamente com
+pequenas entradas. Ela cresce mais rápido do que qualquer função exponencial! Ela pode ser definida por:
+$$F_{Ack}(x,y) =
+		\begin{cases}
+			y + 1,\, \textrm{se}\ \textrm{x} = 0 \\
+			F_{Ack}(x-1,1),\, \textrm{se} \textrm{y} = 0 \\
+			F_{Ack}(x-1,F_{Ack}(x,y-1)),\, \textrm{caso contrário} \\
+		\end{cases}
+$$
+Porém, Raphael anda com dificuldades em calcular os valores de Ackermann
+na mão. Por isso, ele procurou o melhor programador python que conhece, você,
+para criar um programa que compute os valores de Ackermann.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira e única linha da entrada contém apenas dois inteiros X e Y, as entradas
+da função de Ackermann.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve imprimir um único inteiro \textbf{R}, o valor de retorno de $F_{Ack}(x,y)$
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+2 1                         & 5                         \\ \hline
+3 6                         & 509                       \\ \hline
+\end{tabular}
+\caption{Questão G}
+\label{tabela6}
+\end{table}
+
+\newpage % Questão H
+\begin{center}
+\textbf{{\Large Questão H - Gabirint (Tuplas)}}
+\end{center}
+\vspace{5pt}
+A Cada rodada, o jogador da vez escreve seu nome e um número numa lista.
+O número referencia uma posição da lista, o próximo elemento a ser
+analisado. Por exemplo, na lista a seguir:
+\begin{enumerate}
+\item Roberto, 3
+\item Ricardo, 2
+\item José, 5
+\item Roberto, 3
+\item Ricardo, 2
+\end{enumerate}
+O jogo acaba quando o último valor jogado fecha um loop (no exemplo acima,
+o loop é 5,2,1,3), e o vencedor é o dono da linha que aponta para quem
+fechou o loop (no caso, José). \newline \newline
+As crianças de Inventadu estão de saco cheio de ficar discutindo por quem
+ganhou e por que ainda jogam um jogo tão complicado e sem sentido. Por
+isso, você se disponibilizou para escrever um programa que resolve o
+problema deles e, dado um jogo já finalizado, aponta o vencedor.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha da entrada consiste de um inteiro \textbf{N}, o número de jogadas.
+As próximas \textbf{N} linhas contêm, cada uma, uma string \textbf{J} e um inteiro \textbf{I}, os
+valores de cada jogada de Gabirint.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve imprimir na tela uma única linha contendo o nome do
+vencedor da partida em questão.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                        & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}5\\ Roberto 3\\ Ricardo 1\\ José 5\\ Roberto 3\\ Ricardo 2\end{tabular} & José                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ Fulano 2\\ Sicrano 1\end{tabular}                                   & Fulano                    \\ \hline
+\end{tabular}
+\caption{Questão H}
+\label{tabela7}
+\end{table}
+
+\newpage % Questão I
+\begin{center}
+\textbf{{\Large Questão I - Guloso (Dicionários)}}
+\end{center}
+\vspace{5pt}
+Bobernardo é um grande produtor de um soro muito especial, uma injeção que te
+dá capacidades especiais de se transformar em um titã comedor de gente. O
+problema é que a produção do soro envolve muitos passos independentes, mas
+que têm horários específicos de começo e término, e ele só pode executar uma
+deles de cada vez. \newline \newline
+Tendo dificuldade em otimizar a produção de soro, Bobernardo pediu a sua ajuda
+para auxiliá-lo na sua tarefa de aniquilar a humanidade. Seu trabalho é desenvolver um programa que, dados os horários de início e fim de muitas atividades (que podem ser concorrentes ou não), diga qual o número
+máximo de atividades daquele dia.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha da entrada consiste de um inteiro \textbf{N}, o número de atividades
+propostas. As próximas \textbf{N} linhas contém, cada uma, três strings \textbf{T}, \textbf{C} e \textbf{D}, o título da atividade, e os horários de começo e de fim, no formato \textbf{hh:mm} de 24h no dia, respectivamente. Suponha que nenhum horário irá atravessar meia-noite e que duas atividades diferentes nunca terão o mesmo nome.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve imprimir várias linhas na saída padrão, das quais a primeira
+deve conter um único inteiro \textbf{M}, o número máximo de atividades a serem
+realizadas naquele dia. As próximas linhas devem conter os nomes das \textbf{M} atividades a serem realizadas naquele dia, em ordem de execução, separadas por espaços.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                                                                                             & \textbf{Exemplo de Saída}                                                                                \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ Retirada de sangue 07:15 08:00\\ Testes com macacos 07:30 09:00\\ Futebol titã 08:10 08:20\end{tabular}                                                                  & \begin{tabular}[c]{@{}l@{}}2\\ Retirada de sangue\\ Futebol titã\end{tabular}                            \\ \hline
+\begin{tabular}[c]{@{}l@{}}5\\ Oração do dia 01:20 18:00\\ Oração de fechamento 19:00 21:00\\ Desmembramento casual 03:00 04:00\\ café da manhã 05:00 06:00\\ apocalipse zumbi 05:50 22:00\end{tabular} & \begin{tabular}[c]{@{}l@{}}3\\ Desmembramento casual\\ café da manhã\\ Oração de fechamento\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão I}
+\label{tabela8}
+\end{table}
+\end{document}
