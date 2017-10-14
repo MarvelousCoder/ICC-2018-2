@@ -28,7 +28,7 @@
 \textbf{{\large Observações:}}
 \begin{itemize}
 	\item As listas de exercícios serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como ``Informe a primeira entrada''. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
-	\item As questões estão em \textbf{ordem de dificuldade}. Esta lista possui \textbf{9 exercícios}, cada questão possui uma indicação para o tema da questão, tuplas ou dicionários. Isso deve facilitar a resolução de cada uma delas.
+	\item As questões estão em \textbf{ordem de dificuldade}. Esta lista possui \textbf{10 exercícios}, cada questão possui uma indicação para o tema da questão, tuplas ou dicionários. Isso deve facilitar a resolução de cada uma delas, porém cada questão pode ser resolvida da forma que você achar melhor/mais conveniente.
 	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
 	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
 \end{itemize}
@@ -422,5 +422,54 @@ realizadas naquele dia. As próximas linhas devem conter os nomes das \textbf{M}
 \end{tabular}
 \caption{Questão I}
 \label{tabela8}
+\end{table}
+
+\newpage % Questão J
+\begin{center}
+\textbf{{\Large Questão J - Filosofigthers (Dicionários e Tuplas)}}
+\end{center}
+\vspace{5pt}
+Filosofighters é um jogo que a revista Superinteressante lançou em meados de
+2011, que estrela diversos figurões da Filosofia mundial em uma batalha de ideias
+e sangue. \newline \newline
+Depois de seis anos, a Superinteressante decidiu que seria o momento de criar
+uma nova feature para o jogo dela, o suporte à criação de torneios. Mas para isso,
+eles precisam de um programador python muito inteligente, por isso eles
+chamaram você. \newline \newline
+Seu trabalho é definir quem são os derrotados de um torneio, fornecidos os
+resultados das lutas.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha da entrada consiste de um inteiro \textbf{F}, o número de filósofos
+cadastrados no torneio atual. \newline
+As próximas \textbf{F} linhas contém, cada uma, um inteiro $T_F$ e uma string \textbf{N}, o
+identificador de um filósofo no torneio e seu nome, respectivamente. \newline
+As linhas seguintes descreverão cada uma das lutas do torneio e conterão, cada
+uma, três inteiros $T_L$, o identificador desta luta, $T_{F_1}$ e $T_{F_2}$, os lutadores envolvidos, e
+$T_v$, o vencedor. \newline
+A última linha da entrada, por fim, possui uma string `\textbf{FINISHHIM}', e o identificador
+da luta final. \newline
+Note que não necessariamente a ordem de input será a ordem de execução das
+lutas. \newline \newline
+Considere sempre que dois filósofos diferentes nunca compartilharão o mesmo
+nome, ou o mesmo identificador. \newline
+Considere que filósofos nunca terão o mesmo identificador de uma luta. \newline
+Perceba que $T_{F_1}$ e $T_{F_2}$ podem ser identificadores de lutadores ou de outras lutas.
+Neste caso, ele identifica o vencedor da luta identificada.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve imprimir um único inteiro na saída padrão, o número de lutas
+que o vencedor teve que ganhar para vencer o torneio. Perceba que nem todas as lutas cadastradas fazem parte da sequência de lutas que leva à final. Estas lutas não devem ser consideradas.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                                                                                                                    & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 1 Aristóteles\\ 2 Platão\\ 3 Nietzsche\\ 4 Descartes\\ 5 1 2 1\\ 6 3 4 4\\ 7 5 6 6\\ FINISHHIM 7\end{tabular}                                                                                   & 2                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}6\\ 10 SantoAgostinho\\ 0 DavidHume\\ 7 Wittgenstein\\ 1 SãoTomásDeAquino\\ 8 Hegel\\ 2 Kant\\ 102 7 1 7\\ 100 0 8 0\\ 103 102 101 102\\ 104 100 103 100\\ 101 2 10 10\\ FINISHHIM 104\end{tabular} & 2                         \\ \hline
+\end{tabular}
+\caption{Questão J}
+\label{tabela9}
 \end{table}
 \end{document}
