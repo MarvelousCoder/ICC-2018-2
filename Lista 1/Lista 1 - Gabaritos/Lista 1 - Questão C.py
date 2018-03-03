@@ -1,4 +1,4 @@
 distancia = int(input())
 
-tempo = (distancia/30)*60
+tempo = (60*distancia)/15
 print("%.0f minutos"%tempo)
