@@ -224,13 +224,13 @@ print(``\%.0f$\backslash$n\%.0f''\%(a,b))}}
 \textbf{{\Large Questão D - Ímpares Consecutivos}}
 \end{center}
 \vspace{5pt}
-Leia um valor inteiro \textbf{\textit{N}} que é a quantidade de casos de teste que vem a seguir. Cada caso de teste consiste de dois inteiros \textbf{\textit{X}} e \textbf{\textit{Y}}. Você deve apresentar a soma de \textbf{\textit{Y}} ímpares consecutivos a partir de \textbf{\textit{X}}, inclusive o próprio \textbf{\textit{X}} se ele for ímpar. Por exemplo: para a entrada 4 5, a saída deve ser 45, que é equivalente à: 5 + 7 + 9 + 11 + 13, para a entrada 7 4, a saída deve ser 40, que é equivalente à: 7 + 9 + 11 + 13. No final imprima também a maior e a menor soma.
+Leia um valor inteiro \textbf{\textit{N}} que é a quantidade de casos de teste que vem a seguir. Cada caso de teste consiste de dois inteiros \textbf{\textit{X}} e \textbf{\textit{Y}}. Você deve apresentar a soma de \textbf{\textit{Y}} ímpares consecutivos a partir de \textbf{\textit{X}}, inclusive o próprio \textbf{\textit{X}} se ele for ímpar. Por exemplo: para a entrada 4 5, a saída deve ser 45, que é equivalente à: 5 + 7 + 9 + 11 + 13, para a entrada 7 4, a saída deve ser 40, que é equivalente à: 7 + 9 + 11 + 13. No final imprima também a maior e a menor soma, e a média destas duas últimas somas.
 \newline \newline
 \textbf{{\large Entrada}} \newline 
 A primeira linha de entrada é um inteiro $\textrm{\textbf{N}} > \textrm{\textbf{0}}$ que é a quantidade de casos de teste que vem a seguir. Cada caso de teste consiste em uma linha contendo dois inteiros \textbf{\textit{X}} e \textbf{\textit{Y}}, onde $\textrm{\textbf{Y}} > \textrm{\textbf{0}}$.
 \newline \newline
 \textbf{{\large Saída}} \newline
-Imprima a soma \textbf{\textit{S}} dos \textbf{\textit{Y}} consecutivos números ímpares a partir do valor \textbf{\textit{X}}, para cada \textbf{\textit{X}} e \textbf{\textit{Y}} lidos. Imprima também a maior e a menor soma \textbf{\textit{S}}, conforme exemplo abaixo.
+Imprima a soma \textbf{\textit{S}} dos \textbf{\textit{Y}} consecutivos números ímpares a partir do valor \textbf{\textit{X}}, para cada \textbf{\textit{X}} e \textbf{\textit{Y}} lidos. Imprima também a maior e a menor soma \textbf{\textit{S}}. No final, imprima a média da maior e da menor soma com duas casas decimais após a vírgula, conforme exemplo abaixo.
 \newline
 \begin{table}[H]
 	\centering
@@ -249,7 +249,8 @@ Imprima a soma \textbf{\textit{S}} dos \textbf{\textit{Y}} consecutivos números
 	-21 \\
 	32 \\
 	32 \\
-	-21
+	-21 \\
+	5.50
 	\end{tabular} \\ \hline
 
 	\begin{tabular}{l}
@@ -262,7 +263,8 @@ Imprima a soma \textbf{\textit{S}} dos \textbf{\textit{Y}} consecutivos números
 	-4 \\
 	-21 \\
 	-4 \\
-	-21
+	-21 \\
+	-12.50
 	\end{tabular} \\ \hline
 	
 	\begin{tabular}{l}
@@ -273,7 +275,8 @@ Imprima a soma \textbf{\textit{S}} dos \textbf{\textit{Y}} consecutivos números
 	-8 \\
 	-8 \\
 	-8 \\
-	-8
+	-8 \\
+	-8.00
 	\end{tabular} \\ \hline	
 	\end{tabular}
 	\caption{Questão D}
