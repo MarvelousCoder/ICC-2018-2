@@ -1,0 +1,63 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 1} \\
+	\vspace{9pt}
+	{\large Questão B}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item \textbf{Questão A valerá 30\% da nota da Prova 1 e a Questão B valerá 70\% da nota da Prova 1}.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão B - Mínimo Múltiplo Comum}}
+\end{center}
+\vspace{5pt}
+O mínimo múltiplo comum (mmc) de dois inteiros a e b é o menor inteiro positivo que é múltiplo simultaneamente de a e de b. Se não existir tal inteiro positivo, por exemplo, se a = 0 ou b = 0, então \textit{\textbf{mmc(a,b)}} é zero por definição. Sabemos que $a\cdot b = mmc(a,b) \cdot mdc(a,b)$.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada contém apenas valores inteiros, sendo \textbf{\textit{N}} $>$ \textbf{\textit{0}} e \textbf{\textit{A,B}} $\geq$ \textbf{\textit{0}}. Na primeira linha será lido o valor \textbf{N} e nas próximas \textbf{N} linhas serão lidos os valores \textbf{A} e \textbf{B}, separados por espaço.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Para cada valor \textbf{\textit{A}} e \textbf{\textit{B}} lidos, calcule e imprima seu mmc. Ao final, imprima a média dos mínimos múltiplos comuns (com duas casas decimais após a vírgula) dos mmcs calculados.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                       & \textbf{Exemplo de Saída}                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}2 \\ 4 8\\ 3 5\end{tabular}   & \begin{tabular}[c]{@{}l@{}}8\\ 15\\ 11.50 \end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}2 \\ 0 5\\ 5 0\end{tabular}  & \begin{tabular}[c]{@{}l@{}}0\\ 0\\ 0.00\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}3 \\ 12 8 \\ 3 4\\ 0 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}24\\ 12 \\ 0 \\ 12.00\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1 \\ 8 24\end{tabular} & \begin{tabular}[c]{@{}l@{}}24\\ 24.00\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}2 \\ 4 2\\8 10\end{tabular} & \begin{tabular}[c]{@{}l@{}}4\\ 40 \\ 22.00\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão B}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}

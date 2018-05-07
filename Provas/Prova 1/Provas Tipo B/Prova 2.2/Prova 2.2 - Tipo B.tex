@@ -1,0 +1,69 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 1} \\
+	\vspace{9pt}
+	{\large Questão B}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item \textbf{Questão A valerá 30\% da nota da Prova 1 e a Questão B valerá 70\% da nota da Prova 1}.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão B - Sequência Fibonacci}}
+\end{center}
+\vspace{5pt}
+Faça um programa que leia um valor \textbf{N}, depois leia \textbf{N} vezes valores \textbf{k}. Dada a definição abaixo:
+$$F_n =
+		\begin{cases}
+			1;\, n = 1\ \textrm{ou}\ n = 2 \\
+			F_{n-1} + F_{n-2};\, n > 2 \\
+		\end{cases}
+$$ 
+Faça o cálculo do k-ésimo elemento ($F_k$) da sequência de Fibonacci.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste apenas de inteiros \textbf{N} e \textbf{k}. A primeira linha conterá um \textbf{N} $\geq$ \textbf{0}. Nas próximas \textbf{N} linhas serão lidos valores \textbf{k}.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Caso \textbf{k} seja maior que 0, imprima na tela o \textbf{k-ésimo} elemento da sequência de Fibonacci. Caso esse \textbf{k-ésimo} elemento seja ímpar, imprima também $F_{k+1}$. Caso \textbf{k} seja menor ou igual a zero, apenas imprima na tela a mensagem ``erro''. Ao final, informe a média (com 2 casas decimais após a vírgula) de todos os \textbf{k} lidos.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                           & \textbf{Exemplo de Saída}                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ 1\\ 2\\ 3\end{tabular} & \begin{tabular}[c]{@{}l@{}}1\\ 1\\ 1\\ 2\\ 2\\ 2.00\end{tabular}    \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ 1\\ 4\\ 0\end{tabular} & \begin{tabular}[c]{@{}l@{}}1\\ 1\\ 3\\ 5\\ erro\\ 1.67\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ -1\\ -2\end{tabular}   & \begin{tabular}[c]{@{}l@{}}erro\\ erro\\ -1.50\end{tabular}         \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 6\end{tabular}         & \begin{tabular}[c]{@{}l@{}}8\\ 6.00\end{tabular}                    \\ \hline
+\end{tabular}
+\caption{Questão B}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}

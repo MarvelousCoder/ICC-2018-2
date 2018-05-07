@@ -1,0 +1,62 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 1} \\
+	\vspace{9pt}
+	{\large Questão B}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item \textbf{Questão A valerá 30\% da nota da Prova 1 e a Questão B valerá 70\% da nota da Prova 1}.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão B - Somatório Ímpares}}
+\end{center}
+\vspace{5pt}
+Faça um programa que leia um valor \textbf{N}, depois leia \textbf{N} valores \textbf{k}.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste apenas de valores inteiros, sendo \textbf{N} $>$ \textbf{0}. A primeira linha de entrada conterá um inteiro \textbf{N}, nas próximas \textbf{N} linhas serão lidos valores \textbf{k}. O primeiro \textbf{k} da entrada é maior ou igual a zero.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Para cada \textbf{k} $\geq$ \textbf{0} lido imprima na tela a soma \textbf{S} de todos os números ímpares de 0 até \textbf{k}, incluindo o \textbf{k}, se for o caso. Caso \textbf{k} seja menor que 0 apenas imprima na tela a mensagem: ``erro''. Ao final imprima a menor soma \textbf{S} e a média das somas \textbf{S} calculadas.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                & \textbf{Exemplo de Saída}                                           \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ 10\\ 4\\ -1\end{tabular}    & \begin{tabular}[c]{@{}l@{}}25\\ 4\\ erro\\ 4\\ 14.50\end{tabular}   \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 6\\ 2\\ 4\\ -1\end{tabular} & \begin{tabular}[c]{@{}l@{}}9\\ 1\\ 4\\ erro\\ 1\\ 4.67\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 3\\ 4\\ 5\\ -8\end{tabular} & \begin{tabular}[c]{@{}l@{}}4\\ 4\\ 9\\ erro\\ 4\\ 5.67\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 2\end{tabular}              & \begin{tabular}[c]{@{}l@{}}1\\ 1\\ 1.00\end{tabular}                \\ \hline
+\end{tabular}
+\caption{Questão B}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}
