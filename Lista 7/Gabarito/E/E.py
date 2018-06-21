@@ -11,5 +11,5 @@ for word in trecho.split():
     else:
         d[word] = 1
 
-for word in sorted(d, key=lambda x: d[x], reverse=True):
+for word in sorted(d, key=lambda x: (d[x],x), reverse=True):
     print(word.capitalize(), d[word])
