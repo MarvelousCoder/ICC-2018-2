@@ -1,0 +1,12 @@
+k = int(input())
+numeros_lidos = 1
+media = k
+maior = k
+while(k > 0):
+    k = int(input())
+    if(k > 0):
+        if(k > maior):
+            maior = k
+        numeros_lidos += 1
+        media += k
+print("%.2f %d"%((media/numeros_lidos), maior))

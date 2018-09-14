@@ -1,0 +1,61 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 1} \\
+	\vspace{9pt}
+	{\large Questão A}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Sequência de Inteiros}}
+\end{center}
+\vspace{5pt}
+Leia uma sequência de inteiros positivos do teclado, um por linha. A sequência termina quando for lido um inteiro menor ou igual a 0 (que não fará parte da sequência de números lidos).
+\newline \newline
+\textbf{{\large Entrada}} \newline
+Cada linha de entrada conterá um inteiro \textbf{\textit{k}}, quando a linha conter 
+$k\, \leq \, 0$ o programa deve parar.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Informe a média aritmética dos números lidos da sequência com duas casas decimais e o maior \textbf{\textit{k}} lido, na mesma linha. Caso a sequência seja um conjunto vazio considere 0 como o maior número.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                            & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 2\\ 3\\ -1\end{tabular} & 2.00 3                    \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 1\\ 4\\ 0\end{tabular}  & 2.00 4                    \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 5\\ 0\end{tabular}      & 4.50 5                    \\ \hline
+\end{tabular}
+\caption{Questão A}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}
