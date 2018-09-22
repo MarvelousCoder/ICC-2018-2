@@ -1,0 +1,76 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 1} \\
+	\vspace{9pt}
+	{\large Questão A}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas serão corrigidas por um corretor automático, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída).
+	\item Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada".
+	\item Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Cada questão (A e B) vale 50\% da nota da Prova 1.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+
+
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Outorgas em bacias hidrográficas}}
+\end{center}
+
+\vspace{5pt} 
+
+Para fins de estudos hidrológicos, uma Bacia Hidrográfica (BH) é considerada um conjunto de terras drenadas por um corpo d’agua principal e seus afluentes. Vários autores consideram a importância do uso de conceito de BH similar ao de ecossistema, tanto para estudos como para o Gerenciamento Ambiental. O uso das águas em uma bacia é feito por meio de outorgas para diversas atividades como irrigação, bombeamento, piscicultura, abastecimento e mineração.
+
+
+Calcule a atividade que mais consome água em uma BH, a que menos consome água, o consumo médio de água e o maior consumidor de água da BH identificado pelo número do processo.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+Um número N que identifica a quantidade de outorgas na BH. \newline
+N linhas, cada linha com uma outorga identificada pelo número do processo, a atividade e a vazão em m\textsuperscript{3}/s.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Nome da atividade que mais consome água em uma BH. \newline
+Nome da atividade que menos consome água em uma BH. \newline
+O consumo médio de água das atividades da BH em m\textsuperscript{3}/s e duas casas decimais de precisão
+Número do processo que é o maior consumidor de água.
+\newline \newline
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Entrada}                                                                                                              & \textbf{Saída}                                                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ 11/21 IRRIGAÇÃO 40\\ 33/47 BOMBEAMENTO 70\\ 121/342 MINERAÇÃO 22\end{tabular}                                                                                                          & \begin{tabular}[c]{@{}l@{}}BOMBEAMENTO\\ MINERAÇÃO\\ 44.00\\ 33/47\end{tabular}        \\ \hline
+\begin{tabular}[c]{@{}l@{}}5\\ 12/21 ABASTECIMENTO 120.2\\ 543/23 BOMBEAMENTO 32\\ 354/234 PISCICULTURA 12\\ 876/12 IRRIGAÇÃO 120\\ 123/234 ABASTECIMENTO 145\end{tabular}                                            & \begin{tabular}[c]{@{}l@{}}ABASTECIMENTO\\ PISCICULTURA\\ 85.84\\ 123/234\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}7\\ 12/35 IRRIGAÇÃO 30\\ 13/28 BOMBEAMENTO 64\\ 17/68 ABASTECIMENTO 20\\ 548/378 PISCICULTURA 0.38\\ 2123/646 MINERAÇÃO 44.5\\ 545/5465 IRRIGAÇÃO 100\\ 5458/545 IRRIGAÇÃO 80\end{tabular} & \begin{tabular}[c]{@{}l@{}}IRRIGAÇÃO\\ PISCICULTURA\\ 48.41\\ 545/5465\end{tabular}    \\ \hline
+
+\end{tabular}
+\caption{Questão A}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}

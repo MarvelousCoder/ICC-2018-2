@@ -1,0 +1,222 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Lista de Revisão} \\
+	\vspace{9pt}
+	{\large Prova 1}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como ``Informe a primeira entradas''. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Impressão de Sequência}}
+\end{center}
+\vspace{5pt}
+Escreva um programa que leia dois valores inteiros \textbf{\textit{X}} e \textbf{\textit{Y}}. A seguir, mostre uma sequência de 1 até \textbf{\textit{Y}}, passando para a próxima linha a cada \textbf{\textit{X}} números e a soma de todos os números dessa sequência.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada contém duas linhas. A primeira linha será o \textbf{\textit{X}} e a segunda o \textbf{\textit{Y}}, onde \textbf{X e Y são maiores que 0}.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Cada sequência deve ser impressa em uma linha apenas, com 1 espaço em branco entre cada número, conforme exemplo abaixo. \textbf{Não deve haver espaço em branco após o último valor de cada linha}. No final, deverá ser impresso em uma nova linha a soma de todos os números mostrados na tela.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                    & \textbf{Exemplo de Saída}                                                                          \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ 99\end{tabular} & \begin{tabular}[c]{@{}l@{}}1 2 3\\ 4 5 6\\ 7 8 9\\ 10 11 12\\ . . .\\ 97 98 99\\ 4950\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ 9\end{tabular} & \begin{tabular}[c]{@{}l@{}}1 2\\ 3 4\\ 5 6\\ 7 8\\ 9\\ 45\end{tabular}                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 3\end{tabular}  & \begin{tabular}[c]{@{}l@{}}1 2 3\\ 6\end{tabular}                                                  \\ \hline
+\end{tabular}
+\caption{Questão A}
+\end{table}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão B - Sequência de Inteiros}}
+\end{center}
+\vspace{5pt}
+Faça um programa que leia uma sequência de triplas de números inteiros \textbf{\textit{A}}, \textbf{\textit{B}} e \textbf{\textit{C}} do teclado. A quantidade de triplas da sequência é desconhecida, mas ela termina quando \textbf{\textit{A}} for igual a -1. A tripla que contém \textbf{A = -1} não faz parte da sequência.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste de várias triplas de números inteiros  \textbf{\textit{A}}, \textbf{\textit{B}} e \textbf{\textit{C}}. Sendo que o programa continua lendo conjuntos de 3 inteiros indefinidamente, até que receba um conjunto em que \textbf{\textit{A}} seja igual a -1, devendo desconsiderar este último conjunto. Considere que pelo menos uma tripla válida será lida.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Para cada tripla que faz parte da sequência de triplas, o programa deve imprimir a média da tripla. No final, o programa deve imprimir:
+\begin{itemize}
+\item \textbf{N}, onde \textbf{N} é a média de todos os pares encontrados na sequência;
+\item \textbf{M}, onde \textbf{M} é a maior média da sequência de triplas;
+\item \textbf{X}, onde \textbf{X} é a média das médias das triplas que \textbf{\textit{A}} é diferente de -1;
+\end{itemize}
+Todas as médias devem ser impressas com 2 casas decimais após a vírgula.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                            & \textbf{Exemplo de Saída}                                                       \\ \hline
+\begin{tabular}[c]{@{}l@{}}3 3 3\\ 5 0 0\\ 1 3 7\\ -1 2 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}3.00\\ 1.67\\ 3.67\\ 0.00\\ 3.67\\ 2.78\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1 1 1\\ 5 6 7\\ 4 0 2\\ -1 7 8\end{tabular} & \begin{tabular}[c]{@{}l@{}}1.00\\ 6.00\\ 2.00\\ 3.00\\ 6.00\\ 3.00\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1 -1 3\\ -3 5 -5\\ -1 0 0\end{tabular}      & \begin{tabular}[c]{@{}l@{}}1.00\\ -1.00\\ 0.00\\ 1.00\\ 0.00\end{tabular}       \\ \hline
+\end{tabular}
+\caption{Questão B}
+\end{table}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão C - Função Sigma e Tal}}
+\end{center}
+\vspace{5pt}
+A função sigma denotada por $\sigma(n)$ é a função que soma os divisores distintos de \textbf{\textit{n}}, \textbf{incluindo 1 e n}. A função tal denotada por $\tau(n)$ é a função que retorna
+a quantidade de divisores distintos de \textbf{\textit{n}}, \textbf{incluindo 1 e n}. 
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste de um inteiro \textbf{n}, onde $\textrm{\textbf{n}} \geq \textrm{\textbf{1}}$.
+\newline \newline
+\textbf{{\large Saída}} \newline
+A saída será composta de 3 linhas: a primeira linha conterá todos os divisores de \textbf{\textit{n}} separados por espaço, em uma única linha, conforme exemplo abaixo. \textbf{Não deve haver espaços em branco após o último valor da linha}. A segunda linha será o valor $\sigma(n)$, e a terceira $\tau(n)$.
+\newline \newline
+\textbf{{\large Nota}} \newline
+No primeiro exemplo, o número 4 tem três divisores: 1, 2 e 4. $\sigma(4) = 1 + 2 + 4 = 7$ e $\tau(4) = 3$.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída}                                                 \\ \hline
+4                           & \begin{tabular}[c]{@{}l@{}}1 2 4\\ 7\\ 3\end{tabular}                     \\ \hline
+5                           & \begin{tabular}[c]{@{}l@{}}1 5\\ 6\\ 2\end{tabular}                       \\ \hline
+12                          & \begin{tabular}[c]{@{}l@{}}1 2 3 4 6 12\\ 28\\ 6\end{tabular}             \\ \hline
+100                         & \begin{tabular}[c]{@{}l@{}}1 2 4 5 10 20 25 50 100\\ 217\\ 9\end{tabular} \\ \hline
+50                          & \begin{tabular}[c]{@{}l@{}}1 2 5 10 25 50\\ 93\\ 6\end{tabular}           \\ \hline
+\end{tabular}
+\caption{Questão C}
+\end{table}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão D - The Winter is Coming}}
+\end{center}
+\vspace{5pt}
+Os Starks sempre avisaram: ``The Winter is Coming'' e o inverno finalmente chegou em Westeros. O Rei do Norte, Jon Snow, decidiu igualar o ouro entre todas as casas do Norte, dando ouro para algumas. Para isso, ele pediu para você, o Mestre da Moeda, considerar o ouro (em kg) que cada uma possui e calcular o custo mínimo do presente do rei, sabendo que: no Norte existem \textbf{\textit{n}} casas, o ouro que cada uma possui é estimado em um inteiro $a_i$ e que o rei apenas dará ouro, não tirará de ninguém.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha contém um inteiro \textbf{\textit{n}}
+ $(\textrm{\textbf{1}}\, \leq \textrm{\textbf{n}}\, \leq \textrm{\textbf{100}})$ - o número de casas no Norte.
+As próximas \textbf{\textit{n}} linhas contém os inteiros $a_1$, $a_2$, $a_3$, \dots, $a_n$, onde 
+$a_i \geq 0$ corresponde ao ouro, em kg, que cada casa possui. Considere que o primeiro inteiro $a_i$ sempre será o ouro correspondente da casa que \textbf{possui mais ouro}.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Um único inteiro que corresponde a quantidade mínima de ouro (em kg) que Winterfell irá gastar para que todas as casas tenham a mesma quantidade de ouro.
+\newline \newline
+\textbf{{\large Nota}} \newline
+No primeiro exemplo se adicionarmos para a segunda casa 4 kg, para a terceira 3 e para a quarta 2, então todas elas terão 4 kg. \newline
+No quarto exemplo não é possível dar nada para ninguém, porque todas as casas possuem 12 kg.
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                               & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 4\\ 0\\ 1\\ 2\end{tabular} & 9                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ 1\\ 1\\ 0\end{tabular}     & 1                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ 3\\ 1\end{tabular}         & 2                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 12\end{tabular}            & 0                         \\ \hline
+\end{tabular}
+\caption{Questão D}
+\end{table}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão E - Fibonacci}}
+\end{center}
+\vspace{5pt}
+Leia uma sequência de inteiros positivos do teclado, um por linha. A sequência termina quando for lido um inteiro menor ou igual a 0 (que não fará parte da sequência de números lidos). Para cada número 
+\textbf{k} $>$ \textbf{0} lido, calcule o \textbf{k-ésimo}\,($F_k$) elemento da sequência de Fibonacci, conforme definição dada abaixo:
+$$F_n =
+		\begin{cases}
+			1;\, n = 1\ \textrm{ou}\ n = 2 \\
+			F_{n-1} + F_{n-2};\, n > 2 \\
+		\end{cases}
+$$
+\newline \newline
+\textbf{{\large Entrada}} \newline
+Cada linha de entrada conterá um inteiro \textbf{\textit{k}}, quando a linha conter 
+$k\, \leq \, 0$ o programa deve parar. Considere que pelo menos um \textbf{k} $>$ \textbf{0} será lido.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Considerando o valor de $F_k$:
+\begin{itemize}
+\item Caso $F_k$ seja par e k seja par, imprima a soma dos dois.
+\item Caso $F_k$ seja par e k seja ímpar, imprima a diferença de $F_k$ com k.
+\item Caso $F_k$ seja ímpar e k par, imprima a multiplicação.
+\item Caso $F_k$ seja ímpar e k seja ímpar, imprima a divisão inteira de $F_k$ por k.
+\end{itemize}
+Ao final, informa a média aritmética dos números lidos da sequência com duas casas decimais e o maior $F_k$ calculado, conforme exemplo abaixo.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                   & \textbf{Exemplo de Saída}                                              \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 2\\ 3\\ -1\end{tabular}        & \begin{tabular}[c]{@{}l@{}}1\\ 2\\ -1\\ 2.00\\ 2\end{tabular}          \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 1\\ 4\\ 0\end{tabular}         & \begin{tabular}[c]{@{}l@{}}1\\ 1\\ 12\\ 2.00\\ 3\end{tabular}          \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 5\\ 0\end{tabular}             & \begin{tabular}[c]{@{}l@{}}12\\ 1\\ 4.50\\ 5\end{tabular}              \\ \hline
+\begin{tabular}[c]{@{}l@{}}6\\ 7\\ -6\end{tabular}            & \begin{tabular}[c]{@{}l@{}}14\\ 1\\ 6.50\\ 13\end{tabular}             \\ \hline
+\begin{tabular}[c]{@{}l@{}}10\\ 9\\ 8\\ 7\\ -185\end{tabular} & \begin{tabular}[c]{@{}l@{}}550\\ 25\\ 168\\ 1\\ 8.50\\ 55\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão E}
+\end{table}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão F - Duplas de Inteiros}}
+\end{center}
+\vspace{5pt}
+Faça um programa que leia uma sequência de duplas de números inteiros do teclado: \textbf{\textit{A}} e \textbf{\textit{N}}. A quantidade de duplas da sequência é desconhecida, mas ela termina quando \textbf{\textit{A}} for igual a -1. A dupla que contém \textbf{A = -1} não faz parte da sequência, devendo ser desconsiderada.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste de várias duplas de inteiros \textbf{\textit{A}} e \textbf{\textit{N}}, separados por espaço. Considere que pelo menos uma dupla válida será lida.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Ao final da leitura o programa deve imprimir, nessa ordem, a soma de todos os \textbf{N} que fazem dupla com \textbf{A} múltiplos de 8; a média de todos os \textbf{N} maiores que 3 (com duas casas decimais após a vírgula) e a soma da maior dupla da sequência, conforme exemplo abaixo.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                       & \textbf{Exemplo de Saída}                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}1 -1\\ 8 2\\ 5 3\\ -1 4\end{tabular}   & \begin{tabular}[c]{@{}l@{}}2\\ 0.00\\ 10\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}0 4\\ 8 5\\ -8 -4\\ -1 0\end{tabular}  & \begin{tabular}[c]{@{}l@{}}5\\ 4.50\\ 13\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}8 -1\\ 16 1\\ 0 0\\ -1 25\end{tabular} & \begin{tabular}[c]{@{}l@{}}0\\ 0.00\\ 17\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}0 4\\ -1 5\end{tabular}                & \begin{tabular}[c]{@{}l@{}}4\\ 4.00\\ 4\end{tabular}  \\ \hline
+\begin{tabular}[c]{@{}l@{}}8 2\\ 4 3\\ -1 12\end{tabular}         & \begin{tabular}[c]{@{}l@{}}2\\ 0.00\\ 10\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão F}
+\end{table}
+
+\end{document}
