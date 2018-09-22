@@ -1,0 +1,134 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Lista de Revisão para Prova 1}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As listas de exercícios serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item As questões estão em \textbf{ordem de dificuldade}. Cada lista possui 7 exercícios, sendo 1 questão fácil, 3 ou 4 médias e 2 ou 3 difíceis.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Máximo Divisor Comum (MDC)}}
+\end{center}
+\vspace{5pt}
+O máximo divisor comum entre dois ou mais números inteiros é o maior número inteiro que é fator de tais números. Por exemplo, os divisores comuns de 12 e 18 são 1, 2, 3 e 6, logo\textbf{ mdc(12,18) = 6}. Dizemos que dois números inteiros a e b são primos entre si, se e somente se \textbf{mdc(a,b) = 1}.
+\newline
+\newline
+Faça um programa que leia uma sequência de duplas de inteiros do teclado, A e B. A quantidade de duplas da sequência é desconhecida, mas ela termina quando A ou B for menor ou igual a zero. A dupla que contém A ou B menor ou igual a zero não faz parte da sequência, devendo ser desconsiderada. Para cada A e B lidos que fazem parte da sequência, calcule e imprima na tela \textbf{mdc(A,B)}. Ao final imprima a média de todos os máximos divisores comuns calculados.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada será a sequência de duplas de inteiros, cada linha de entrada contém dois inteiros A e B, separados por espaço. Considere que a sequência contém pelo menos uma dupla.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Para cada dupla válida lida, imprima o mdc. Ao final imprima a média (com 2 casas decimais após a vírgula) de todos os mdc’s calculados.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+	\begin{tabular}{l}
+	8 12 \\
+	7 9 \\
+	397 311 \\
+	0 4
+	\end{tabular} & \begin{tabular}{1} 4 \\ 1 \\ 1 \\ 2.00 \end{tabular} \\
+
+	\hline
+		
+	\begin{tabular}{l}
+	8 13 \\
+	8 14 \\
+	4 0
+	\end{tabular} & \begin{tabular}{1} 1 \\ 2 \\ 1.50 \end{tabular} \\ \hline
+	
+	\begin{tabular}{l}
+	16 120 \\
+	-1 -1
+	\end{tabular} & \begin{tabular}{1} 8 \\ 8.00 \end{tabular} \\ \hline
+	
+	\end{tabular}
+	\caption{Questão A}
+	\label{tabela1}
+\end{table}
+
+\newpage % Questão B
+\begin{center}
+\textbf{{\Large Questão B - Mínimo Múltiplo Comum (MMC)}}
+\end{center}
+\vspace{5pt}
+O Mínimo Múltiplo comum (mmc) de dois inteiros a e b é o menor inteiro positivo que  é múltiplo simultaneamente de a e de b. Se nāo existir tal inteiro positivo, por exemplo, se a = 0 ou b = 0, então mmc(a,b) é zero por definiçãao. Sabemos que a · b = mmc(a, b) · mdc(a, b).
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada contém apenas valores inteiros, sendo N > 0 e A,B ≥ 0. Na primeira linha será lido o valor N e nas próximas N linhas serão lidos os valores A e B, separados por espaço.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Para cada valor A e B lidos, calcule e imprima seu mmc. Ao final, imprima a média dos mínimos múltiplos comuns (com duas casas decimais após a vírgula) dos mmcs calculados.
+\newline
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+	\begin{tabular}{l}
+	2 \\
+	4 8 \\
+	3 5 
+	\end{tabular} & \begin{tabular}{1} 8 \\ 15 \\ 11.50 \end{tabular} \\
+
+	\hline
+		
+	\begin{tabular}{l}
+	2 \\
+    0 5 \\
+	5 0
+	\end{tabular} & \begin{tabular}{1} 0 \\ 0 \\ 0.00 \end{tabular} \\ \hline
+	
+	\begin{tabular}{l}
+	3 \\
+	12 8 \\
+	3 4 \\
+	0 2
+	\end{tabular} & \begin{tabular}{1} 24 \\ 12 \\ 0 \\ 12.00 \end{tabular} \\ \hline
+	
+	\begin{tabular}{l}
+	1 \\
+	8 24
+	\end{tabular} & \begin{tabular}{1} 24 \\ 24.00 \end{tabular} \\ \hline
+	
+	\begin{tabular}{l}
+	2 \\
+	4 2 \\
+	8 10
+	\end{tabular} & \begin{tabular}{1} 4 \\ 40 \\ 22.00 \end{tabular} \\ \hline
+	
+	\end{tabular}
+	\caption{Questão B}
+	\label{tabela1}
+\end{table}
+
+
+\end{document}
