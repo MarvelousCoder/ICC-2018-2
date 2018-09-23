@@ -1,0 +1,78 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 1} \\
+	\vspace{9pt}
+	{\large Questão B}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item \textbf{Questão A valerá 30\% da nota da Prova 1 e a Questão B valerá 70\% da nota da Prova 1}.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão B - Fibonacci}}
+\end{center}
+\vspace{5pt}
+Leia uma sequência de inteiros positivos do teclado, um por linha. A sequência termina quando for lido um inteiro menor ou igual a 0 (que não fará parte da sequência de números lidos). Para cada número 
+\textbf{k} $>$ \textbf{0} lido, calcule o \textbf{k-ésimo}\,($F_k$) elemento da sequência de Fibonacci, conforme definição dada abaixo:
+$$F_n =
+		\begin{cases}
+			1;\, n = 1\ \textrm{ou}\ n = 2 \\
+			F_{n-1} + F_{n-2};\, n > 2 \\
+		\end{cases}
+$$
+\newline \newline
+\textbf{{\large Entrada}} \newline
+Cada linha de entrada conterá um inteiro \textbf{\textit{k}}, quando a linha conter 
+$k\, \leq \, 0$ o programa deve parar. Considere que pelo menos um \textbf{k} $>$ \textbf{0} será lido.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Considerando o valor de $F_k$:
+\begin{itemize}
+\item Caso $F_k$ seja par e k seja par, imprima a soma dos dois.
+\item Caso $F_k$ seja par e k seja ímpar, imprima a diferença de $F_k$ com k.
+\item Caso $F_k$ seja ímpar e k par, imprima a multiplicação.
+\item Caso $F_k$ seja ímpar e k seja ímpar, imprima a divisão inteira de $F_k$ por k.
+\end{itemize}
+Ao final, informa a média aritmética dos números lidos da sequência com duas casas decimais e o maior $F_k$ calculado, conforme exemplo abaixo.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                   & \textbf{Exemplo de Saída}                                              \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 2\\ 3\\ -1\end{tabular}        & \begin{tabular}[c]{@{}l@{}}1\\ 2\\ -1\\ 2.00\\ 2\end{tabular}          \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 1\\ 4\\ 0\end{tabular}         & \begin{tabular}[c]{@{}l@{}}1\\ 1\\ 12\\ 2.00\\ 3\end{tabular}          \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 5\\ 0\end{tabular}             & \begin{tabular}[c]{@{}l@{}}12\\ 1\\ 4.50\\ 5\end{tabular}              \\ \hline
+\begin{tabular}[c]{@{}l@{}}6\\ 7\\ -6\end{tabular}            & \begin{tabular}[c]{@{}l@{}}14\\ 1\\ 6.50\\ 13\end{tabular}             \\ \hline
+\begin{tabular}[c]{@{}l@{}}10\\ 9\\ 8\\ 7\\ -185\end{tabular} & \begin{tabular}[c]{@{}l@{}}550\\ 25\\ 168\\ 1\\ 8.50\\ 55\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão B}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}

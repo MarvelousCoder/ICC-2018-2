@@ -1,0 +1,69 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 2} \\
+	\vspace{9pt}
+	{\large Questão A}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item \textbf{Questão A valerá 40\% da nota da Prova 2 e a Questão B valerá 60\% da nota da Prova 2}.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Carros}}
+\end{center}
+\vspace{5pt}
+A1A é um lava-jato na região de Albuquerque que recebe um grande volume de
+carros todos os dias. Seu dono, Bogdan Wolynetz, tem tido problemas recentes
+com alguns de seus funcionários e precisa de alguma forma de gerenciar os carros
+sujos e necessitados de cera de seus clientes. Para isso, ele decidiu contratar um desenvolvedor python, você, para criar um sistema de gerenciamento sólido para seu estabelecimento. \newline \newline
+\textbf{{\large Entrada}} \newline
+Cada linha da entrada começa com uma letra `\textbf{E}', `\textbf{R}' ou `\textbf{F}', indicando o tipo de
+transação a ser realizada.
+Se a transação for do tipo `\textbf{E}' (entrar), o resto da linha conterá o primeiro nome do
+cliente (sem espaços), e qual o tipo de serviço a ser realizado (`cera' ou `lavagem').
+Caso a transação for `\textbf{R}' (retirar), o resto da linha conterá somente o primeiro nome
+do cliente a ter o carro retirado.
+Por fim, a última linha da entrada será sempre do tipo `\textbf{F}', indicando o fechamento
+do lava-jato. \newline \newline
+\textbf{{\large Saída}} \newline
+Para cada transação do tipo `\textbf{R}', seu programa deve imprimir qual o último serviço
+que foi realizado no carro em questão. Caso não houver nenhum carro cadastrado
+sob o nome requisitado, imprimir `Usuário não cadastrado'.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                          & \textbf{Exemplo de Saída}                                                                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}E Walter Cera\\ R Heisenberg\\ R Walter\\ F\end{tabular}                                                  & \begin{tabular}[c]{@{}l@{}}Usuário não cadastrado\\ cera\end{tabular}                                 \\ \hline
+\begin{tabular}[c]{@{}l@{}}R Roberto\\ R André\\ E André lavagem\\ E Rafael cera\\ E André cera\\ R André\\ R André\\ F\end{tabular} & \begin{tabular}[c]{@{}l@{}}Usuário não cadastrado\\ Usuário não cadastrado\\ cera\\ cera\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}

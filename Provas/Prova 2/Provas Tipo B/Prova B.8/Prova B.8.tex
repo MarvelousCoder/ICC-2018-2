@@ -1,0 +1,77 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 2} \\
+	\vspace{9pt}
+	{\large Questão B}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item \textbf{Questão A valerá 40\% da nota da Prova 2 e a Questão B valerá 60\% da nota da Prova 2}.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão B - Interland}}
+\end{center}
+\vspace{5pt}
+A internet pode ser um lugar repleto de problemas e perigos, mas também pode
+ser um lugar fantástico para aprender e se divertir. \newline
+É com isso em mente que recentemente a Google criou um jogo para browser
+chamado Interland. É um jogo colorido desenvolvido especialmente para ensinar
+às crianças (e adultos) a como reconhecer notícias falsas, a compartilhar conteúdo
+com cuidado, a proteger seus dados secretos e a como ser gentil na rede.
+Inspirado pelo Inteland da Google, você decidiu criar o seu próprio detector de
+conteúdo inapropriado na internet. \newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha da entrada contém um inteiro \textbf{N}, o número de \textit{features} a serem
+testadas. \newline
+As próximas \textbf{N} linhas contêm, cada uma, uma string $\textbf{F}_i$, o nome da \textit{feature} descrita. \newline
+A linha seguinte, por sua vez, contém um inteiro \textbf{M}, o número de sites a serem
+analisados. \newline
+As próximas \textbf{M} linhas contêm, cada uma, por fim, uma string de \textbf{N} caracteres, cada
+um podendo ser \textbf{X}, caso o site atenda à \textit{feature}, ou \textbf{O} (a letra ‘O’), caso contrário.
+Ou seja, se o \textbf{primeiro} caractere da string for um ‘X’, esse site atende a \textbf{primeira}
+\textit{feature}.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve identificar dentre os sites para análise, qual o que \textbf{menos}
+atende às \textit{features} definidas (ou seja, o que mais contém `O's) e imprimir na saída
+padrão quais as \textit{features} que ele \textbf{não} atende, na ordem de input, um em cada
+linha. Considere que sempre haverá um único site com o número mínimo de \textit{features}
+atendidas.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                            & \textbf{Exemplo de Saída}                                                                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ sem phishing\\ conteúdo verificado\\ conexão https\\ 2\\ OXO\\ XOX\end{tabular}                         & \begin{tabular}[c]{@{}l@{}}sem phishing\\ conexão https\end{tabular}                                  \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ comunidade gentil e acolhedora\\ Banco de Dados criptografado\\ 5\\ XX\\ OO\\ XO\\ OX\\ XX\end{tabular} & \begin{tabular}[c]{@{}l@{}}comunidade gentil e acolhedora\\ Banco de Dados criptografado\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}

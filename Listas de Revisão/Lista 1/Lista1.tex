@@ -1,0 +1,219 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Lista de Revisão} \\
+	\vspace{9pt}
+	{\large Prova 1}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como ``Informe a primeira entradas''. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Máximo Divisor Comum}}
+\end{center}
+\vspace{5pt}
+O máximo divisor comum entre dois ou mais números inteiros é o maior número inteiro que é fator de tais números. Por exemplo, os divisores comuns de 12 e 18 são 1, 2, 3 e 6, logo \textbf{\textit{mdc(12,18) = 6}}. Dizemos que dois números inteiros a e b são primos entre si, se e somente se \textbf{\textit{mdc(a,b) = 1}}. Faça um programa que leia uma sequência de duplas de inteiros do teclado, \textbf{A} e \textbf{B}. A quantidade de duplas da sequência é desconhecida, mas ela termina quando \textbf{A} ou \textbf{B} for menor ou igual a zero. A dupla que contém \textbf{A} ou \textbf{B} menor ou igual a zero não faz parte da sequência, devendo ser desconsiderada.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada será a sequência de duplas de inteiros, cada linha de entrada contém dois inteiros \textbf{A} e \textbf{B}, separados por espaço. Considere que a sequência contém pelo menos uma dupla.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Para cada \textbf{A} e \textbf{B} lidos que fazem parte da sequência, calcule e imprima na tela \textbf{\textit{mdc(A,B)}}. Ao final imprima a média de todos os máximos divisores comuns calculados com duas casas decimais após a vírgula.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                       & \textbf{Exemplo de Saída}                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}8 12\\ 7 9\\ 397 311\\ -0 4\end{tabular}   & \begin{tabular}[c]{@{}l@{}}4\\ 1\\ 1 \\ 2.00\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}8 13\\ 8 14\\ 4 0\end{tabular}  & \begin{tabular}[c]{@{}l@{}}1\\ 2\\ 1.50\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}16 120 \\ -1 -1\end{tabular} & \begin{tabular}[c]{@{}l@{}}8\\ 8.00 \end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão A}
+\end{table}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão B - Mínimo Múltiplo Comum}}
+\end{center}
+\vspace{5pt}
+O mínimo múltiplo comum (mmc) de dois inteiros a e b é o menor inteiro positivo que é múltiplo simultaneamente de a e de b. Se não existir tal inteiro positivo, por exemplo, se a = 0 ou b = 0, então \textit{\textbf{mmc(a,b)}} é zero por definição. Sabemos que $a\cdot b = mmc(a,b) \cdot mdc(a,b)$.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada contém apenas valores inteiros, sendo \textbf{\textit{N}} $>$ \textbf{\textit{0}} e \textbf{\textit{A,B}} $\geq$ \textbf{\textit{0}}. Na primeira linha será lido o valor \textbf{N} e nas próximas \textbf{N} linhas serão lidos os valores \textbf{A} e \textbf{B}, separados por espaço.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Para cada valor \textbf{\textit{A}} e \textbf{\textit{B}} lidos, calcule e imprima seu mmc. Ao final, imprima a média dos mínimos múltiplos comuns (com duas casas decimais após a vírgula) dos mmcs calculados.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                       & \textbf{Exemplo de Saída}                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}2 \\ 4 8\\ 3 5\end{tabular}   & \begin{tabular}[c]{@{}l@{}}8\\ 15\\ 11.50 \end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}2 \\ 0 5\\ 5 0\end{tabular}  & \begin{tabular}[c]{@{}l@{}}0\\ 0\\ 0.00\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}3 \\ 12 8 \\ 3 4\\ 0 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}24\\ 12 \\ 0 \\ 12.00\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1 \\ 8 24\end{tabular} & \begin{tabular}[c]{@{}l@{}}24\\ 24.00\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}2 \\ 4 2\\8 10\end{tabular} & \begin{tabular}[c]{@{}l@{}}4\\ 40 \\ 22.00\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão B}
+\end{table}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão C - Função Sigma e Tal}}
+\end{center}
+\vspace{5pt}
+A função sigma denotada por $\sigma(n)$ é a função que soma os divisores distintos de \textbf{\textit{n}}, \textbf{incluindo 1 e n}. A função tal denotada por $\tau(n)$ é a função que retorna
+a quantidade de divisores distintos de \textbf{\textit{n}}, \textbf{incluindo 1 e n}. 
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste de um inteiro \textbf{n}, onde $\textrm{\textbf{n}} \geq \textrm{\textbf{1}}$.
+\newline \newline
+\textbf{{\large Saída}} \newline
+A saída será composta de 3 linhas: a primeira linha conterá todos os divisores de \textbf{\textit{n}} separados por espaço, em uma única linha, conforme exemplo abaixo. \textbf{Não deve haver espaços em branco após o último valor da linha}. A segunda linha será o valor $\sigma(n)$, e a terceira $\tau(n)$.
+\newline \newline
+\textbf{{\large Nota}} \newline
+No primeiro exemplo, o número 4 tem três divisores: 1, 2 e 4. $\sigma(4) = 1 + 2 + 4 = 7$ e $\tau(4) = 3$.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída}                                                 \\ \hline
+4                           & \begin{tabular}[c]{@{}l@{}}1 2 4\\ 7\\ 3\end{tabular}                     \\ \hline
+5                           & \begin{tabular}[c]{@{}l@{}}1 5\\ 6\\ 2\end{tabular}                       \\ \hline
+12                          & \begin{tabular}[c]{@{}l@{}}1 2 3 4 6 12\\ 28\\ 6\end{tabular}             \\ \hline
+100                         & \begin{tabular}[c]{@{}l@{}}1 2 4 5 10 20 25 50 100\\ 217\\ 9\end{tabular} \\ \hline
+50                          & \begin{tabular}[c]{@{}l@{}}1 2 5 10 25 50\\ 93\\ 6\end{tabular}           \\ \hline
+\end{tabular}
+\caption{Questão C}
+\end{table}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão D - The Winter is Coming}}
+\end{center}
+\vspace{5pt}
+Os Starks sempre avisaram: ``The Winter is Coming'' e o inverno finalmente chegou em Westeros. O Rei do Norte, Jon Snow, decidiu igualar o ouro entre todas as casas do Norte, dando ouro para algumas. Para isso, ele pediu para você, o Mestre da Moeda, considerar o ouro (em kg) que cada uma possui e calcular o custo mínimo do presente do rei, sabendo que: no Norte existem \textbf{\textit{n}} casas, o ouro que cada uma possui é estimado em um inteiro $a_i$ e que o rei apenas dará ouro, não tirará de ninguém.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha contém um inteiro \textbf{\textit{n}}
+ $(\textrm{\textbf{1}}\, \leq \textrm{\textbf{n}}\, \leq \textrm{\textbf{100}})$ - o número de casas no Norte.
+As próximas \textbf{\textit{n}} linhas contém os inteiros $a_1$, $a_2$, $a_3$, \dots, $a_n$, onde 
+$a_i \geq 0$ corresponde ao ouro, em kg, que cada casa possui. Considere que o primeiro inteiro $a_i$ sempre será o ouro correspondente da casa que \textbf{possui mais ouro}.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Um único inteiro que corresponde a quantidade mínima de ouro (em kg) que Winterfell irá gastar para que todas as casas tenham a mesma quantidade de ouro.
+\newline \newline
+\textbf{{\large Nota}} \newline
+No primeiro exemplo se adicionarmos para a segunda casa 4 kg, para a terceira 3 e para a quarta 2, então todas elas terão 4 kg. \newline
+No quarto exemplo não é possível dar nada para ninguém, porque todas as casas possuem 12 kg.
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                               & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 4\\ 0\\ 1\\ 2\end{tabular} & 9                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ 1\\ 1\\ 0\end{tabular}     & 1                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ 3\\ 1\end{tabular}         & 2                         \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 12\end{tabular}            & 0                         \\ \hline
+\end{tabular}
+\caption{Questão D}
+\end{table}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão E - Fibonacci}}
+\end{center}
+\vspace{5pt}
+Leia uma sequência de inteiros positivos do teclado, um por linha. A sequência termina quando for lido um inteiro menor ou igual a 0 (que não fará parte da sequência de números lidos). Para cada número 
+\textbf{k} $>$ \textbf{0} lido, calcule o \textbf{k-ésimo}\,($F_k$) elemento da sequência de Fibonacci, conforme definição dada abaixo:
+$$F_n =
+		\begin{cases}
+			1;\, n = 1\ \textrm{ou}\ n = 2 \\
+			F_{n-1} + F_{n-2};\, n > 2 \\
+		\end{cases}
+$$
+\newline \newline
+\textbf{{\large Entrada}} \newline
+Cada linha de entrada conterá um inteiro \textbf{\textit{k}}, quando a linha conter 
+$k\, \leq \, 0$ o programa deve parar. Considere que pelo menos um \textbf{k} $>$ \textbf{0} será lido.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Considerando o valor de $F_k$:
+\begin{itemize}
+\item Caso $F_k$ seja par e k seja par, imprima a soma dos dois.
+\item Caso $F_k$ seja par e k seja ímpar, imprima a diferença de $F_k$ com k.
+\item Caso $F_k$ seja ímpar e k par, imprima a multiplicação.
+\item Caso $F_k$ seja ímpar e k seja ímpar, imprima a divisão inteira de $F_k$ por k.
+\end{itemize}
+Ao final, informa a média aritmética dos números lidos da sequência com duas casas decimais e o maior $F_k$ calculado, conforme exemplo abaixo.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                   & \textbf{Exemplo de Saída}                                              \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 2\\ 3\\ -1\end{tabular}        & \begin{tabular}[c]{@{}l@{}}1\\ 2\\ -1\\ 2.00\\ 2\end{tabular}          \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 1\\ 4\\ 0\end{tabular}         & \begin{tabular}[c]{@{}l@{}}1\\ 1\\ 12\\ 2.00\\ 3\end{tabular}          \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 5\\ 0\end{tabular}             & \begin{tabular}[c]{@{}l@{}}12\\ 1\\ 4.50\\ 5\end{tabular}              \\ \hline
+\begin{tabular}[c]{@{}l@{}}6\\ 7\\ -6\end{tabular}            & \begin{tabular}[c]{@{}l@{}}14\\ 1\\ 6.50\\ 13\end{tabular}             \\ \hline
+\begin{tabular}[c]{@{}l@{}}10\\ 9\\ 8\\ 7\\ -185\end{tabular} & \begin{tabular}[c]{@{}l@{}}550\\ 25\\ 168\\ 1\\ 8.50\\ 55\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão E}
+\end{table}
+
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão F - Duplas de Inteiros}}
+\end{center}
+\vspace{5pt}
+Faça um programa que leia uma sequência de duplas de números inteiros do teclado: \textbf{\textit{A}} e \textbf{\textit{N}}. A quantidade de duplas da sequência é desconhecida, mas ela termina quando \textbf{\textit{A}} for igual a -1. A dupla que contém \textbf{A = -1} não faz parte da sequência, devendo ser desconsiderada.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste de várias duplas de inteiros \textbf{\textit{A}} e \textbf{\textit{N}}, separados por espaço. Considere que pelo menos uma dupla válida será lida.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Ao final da leitura o programa deve imprimir, nessa ordem, a soma de todos os \textbf{N} que fazem dupla com \textbf{A} múltiplos de 8; a média de todos os \textbf{N} maiores que 3 (com duas casas decimais após a vírgula) e a soma da maior dupla da sequência, conforme exemplo abaixo.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                       & \textbf{Exemplo de Saída}                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}1 -1\\ 8 2\\ 5 3\\ -1 4\end{tabular}   & \begin{tabular}[c]{@{}l@{}}2\\ 0.00\\ 10\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}0 4\\ 8 5\\ -8 -4\\ -1 0\end{tabular}  & \begin{tabular}[c]{@{}l@{}}5\\ 4.50\\ 13\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}8 -1\\ 16 1\\ 0 0\\ -1 25\end{tabular} & \begin{tabular}[c]{@{}l@{}}0\\ 0.00\\ 17\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}0 4\\ -1 5\end{tabular}                & \begin{tabular}[c]{@{}l@{}}4\\ 4.00\\ 4\end{tabular}  \\ \hline
+\begin{tabular}[c]{@{}l@{}}8 2\\ 4 3\\ -1 12\end{tabular}         & \begin{tabular}[c]{@{}l@{}}2\\ 0.00\\ 10\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão F}
+\end{table}
+
+\end{document}

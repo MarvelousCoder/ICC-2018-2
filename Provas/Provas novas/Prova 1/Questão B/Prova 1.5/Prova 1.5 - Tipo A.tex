@@ -1,0 +1,61 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 1} \\
+	\vspace{9pt}
+	{\large Questão A}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Fatorial}}
+\end{center}
+\vspace{5pt}
+Na matemática, o fatorial de um número natural n, representado por $n!$, é o produto de todos os inteiros positivos menores ou iguais a n. A notação $n!$ foi introduzida por Christian Kramp em 1808. \newline \newline Leia uma sequência de inteiros positivos do teclado, um por linha. A sequência termina quando for lido um inteiro menor que 0 (que não fará parte da sequência de números lidos).
+\newline \newline
+\textbf{{\large Entrada}} \newline
+Cada linha de entrada conterá um inteiro \textbf{\textit{k}}, a linha que conter \textbf{k} $<$ \textbf{0} deverá ser desconsiderada. Considere que pelo menos um \textbf{\textit{k}} $\geq$ \textbf{\textit{0}} será lido.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Para cada número \textbf{\textit{k}} $\geq$ \textbf{\textit{0}} lido calcule e imprima o seu fatorial.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                       & \textbf{Exemplo de Saída}                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}0 \\ 4 \\ 3  \\2 \\-1\end{tabular}   & \begin{tabular}[c]{@{}l@{}}1\\ 24\\ 6 \\ 2 \end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1 \\ 1\\ 5 \\6 \\7 \\-2\end{tabular}  & \begin{tabular}[c]{@{}l@{}}1\\ 1\\ 
+120\\720 \\5040\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}2 \\ 1 \\ -1\end{tabular} & \begin{tabular}[c]{@{}l@{}}2\\ 1\end{tabular} \\ \hline
+\end{tabular}
+\caption{Questão A}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}

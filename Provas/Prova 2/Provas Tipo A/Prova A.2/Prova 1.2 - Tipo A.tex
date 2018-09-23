@@ -1,0 +1,74 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 2} \\
+	\vspace{9pt}
+	{\large Questão A}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item \textbf{Questão A valerá 40\% da nota da Prova 2 e a Questão B valerá 60\% da nota da Prova 2}.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Arranjos}}
+\end{center}
+\vspace{5pt}
+Albertíneo é um jovem que tem uma compulsão por trocar a ordem de tudo
+que vê. Potes, copos, panelas e até seus próprios amiguinhos. \newline \newline
+Seus amigos, às vezes, se irritam bastante pois quando ele entra nos seus
+quartos, sai tudo trocado. Até que um dia, um deles ouviu falar que
+programação é a solução de todos os problemas e procurou um habilidoso
+programador python para resolver a situação, você. \newline \newline
+Sejam as seguintes permutas:
+\begin{enumerate}
+\item A, B, C $\longrightarrow$ C, B, A
+\item A, B, C $\longrightarrow$ A, C, B
+\item A, B, C $\longrightarrow$ B, A, C
+\end{enumerate}
+Seu trabalho é, dada a ordem de execução de cada uma das permutas 1, 2 ou 3, determinar a configuração final dos objetos.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A primeira linha do programa contém um inteiro \textbf{N}, o número de permutas
+executadas. As próximas \textbf{N} linhas contêm, cada uma, um inteiro (1, 2, ou 3), o
+identificador da permuta, como descrito acima.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Seu programa deve imprimir A, B, C, na tela, permutados conforme Albertíneo
+reorganizou-os após deixar a cena do crime.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                           & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ 2\\ 1\\ 3\end{tabular} & C B A                     \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ 1\\ 1\end{tabular}     & A B C                     \\ \hline
+\end{tabular}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}

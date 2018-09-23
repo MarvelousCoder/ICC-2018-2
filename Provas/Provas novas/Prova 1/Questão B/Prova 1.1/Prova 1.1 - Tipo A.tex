@@ -1,0 +1,66 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 1} \\
+	\vspace{9pt}
+	{\large Questão A}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Divisores}}
+\end{center}
+\vspace{5pt}
+Dado um inteiro \textbf{n} imprima na tela todos os seus divisores naturais.
+\newline \newline
+\textbf{{\large Entrada}} \newline
+A entrada consiste de um inteiro \textbf{n}, onde $\textrm{\textbf{n}} \geq \textrm{\textbf{1}}$.
+\newline \newline
+\textbf{{\large Saída}} \newline
+A saída será todos os divisores de \textbf{\textit{n}} separados por espaço, em uma única linha, conforme exemplo abaixo. \textbf{Não deve haver espaços em branco após o último valor da linha}.
+\newline \newline
+\textbf{{\large Nota}} \newline
+No primeiro exemplo, o número 4 tem três divisores: 1, 2 e 4. \newline
+No quarto exemplo, o número 100 tem 9 divisores: 1, 2, 4, 5, 10, 20, 25, 50 e 100.
+\newline
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada} & \textbf{Exemplo de Saída} \\ \hline
+4                           & 1 2 4                     \\ \hline
+5                           & 1 5                       \\ \hline
+12                          & 1 2 3 4 6 12              \\ \hline
+100                         & 1 2 4 5 10 20 25 50 100   \\ \hline
+50                          & 1 2 5 10 25 50            \\ \hline
+\end{tabular}
+\caption{Questão A}
+\end{table}
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}
