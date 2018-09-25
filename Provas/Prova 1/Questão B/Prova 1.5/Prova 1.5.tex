@@ -19,7 +19,7 @@
 	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
 	\textbf{{\large Prova 1} \\
 	\vspace{9pt}
-	{\large Questão A}} \\
+	{\large Questão B}} \\
 	\noindent\rule{\textwidth}{0.4pt}
 	\newline
 \end{center}
@@ -33,28 +33,27 @@
 \end{itemize}
 \newpage % Questão A 
 \begin{center}
-\textbf{{\Large Questão A - Conjunto de Inteiros}}
+\textbf{{\Large Questão B - Fatorial}}
 \end{center}
 \vspace{5pt}
-Faça um programa que leia um valor \textbf{N}, depois leia \textbf{N} vezes valores \textbf{A} e \textbf{B}.
+Na matemática, o fatorial de um número natural n, representado por $n!$, é o produto de todos os inteiros positivos menores ou iguais a n. A notação $n!$ foi introduzida por Christian Kramp em 1808. \newline \newline Leia uma sequência de inteiros positivos do teclado, um por linha. A sequência termina quando for lido um inteiro menor que 0 (que não fará parte da sequência de números lidos).
 \newline \newline
 \textbf{{\large Entrada}} \newline
-A entrada contém somente valores inteiros, sendo \textbf{N} $>$ \textbf{0} e \textbf{A,B} $>$ \textbf{0}. Na primeira linha será lido o valor \textbf{N} e nas próximas \textbf{N} linhas serão lidos os valores \textbf{A} e \textbf{B}, separados por espaço.
+Cada linha de entrada conterá um inteiro \textbf{\textit{k}}, a linha que conter \textbf{k} $<$ \textbf{0} deverá ser desconsiderada. Considere que pelo menos um \textbf{\textit{k}} $\geq$ \textbf{\textit{0}} será lido.
 \newline \newline
 \textbf{{\large Saída}} \newline
-Ao final imprima a média de todos os \textbf{A} e \textbf{B} pares lidos do teclado, com duas casas decimais após a vírgula.
+Para cada número \textbf{\textit{k}} $\geq$ \textbf{\textit{0}} lido calcule e imprima o seu fatorial.
 \newline
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Exemplo de Entrada}                                        & \textbf{Exemplo de Saída} \\ \hline
-\begin{tabular}[c]{@{}l@{}}3\\ 4 8\\ 3 5\\ 2 2\end{tabular}        & 4.00                      \\ \hline
-\begin{tabular}[c]{@{}l@{}}2\\ 8 12\\ 7 9\end{tabular}             & 10.00                     \\ \hline
-\begin{tabular}[c]{@{}l@{}}1\\ 8 24\end{tabular}                   & 16.00                     \\ \hline
-\begin{tabular}[c]{@{}l@{}}4\\ 12 8\\ 3 4\\ 1 1\\ 2 1\end{tabular} & 6.50                      \\ \hline
+\textbf{Exemplo de Entrada}                                       & \textbf{Exemplo de Saída}                             \\ \hline
+\begin{tabular}[c]{@{}l@{}}0 \\ 4 \\ 3  \\2 \\-1\end{tabular}   & \begin{tabular}[c]{@{}l@{}}1\\ 24\\ 6 \\ 2 \end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1 \\ 1\\ 5 \\6 \\7 \\-2\end{tabular}  & \begin{tabular}[c]{@{}l@{}}1\\ 1\\ 
+120\\720 \\5040\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}2 \\ 1 \\ -1\end{tabular} & \begin{tabular}[c]{@{}l@{}}2\\ 1\end{tabular} \\ \hline
 \end{tabular}
-\caption{Questão A}
 \end{table}
 \flushright
 \textbf{\Large Boa Prova!}

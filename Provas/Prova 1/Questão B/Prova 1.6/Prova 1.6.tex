@@ -1,4 +1,3 @@
-
 \documentclass[a4paper, 12pt]{article}
 
 \usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
@@ -20,7 +19,7 @@
 	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
 	\textbf{{\large Prova 1} \\
 	\vspace{9pt}
-	{\large Questão A}} \\
+	{\large Questão B}} \\
 	\noindent\rule{\textwidth}{0.4pt}
 	\newline
 \end{center}
@@ -34,28 +33,27 @@
 \end{itemize}
 \newpage % Questão A 
 \begin{center}
-\textbf{{\Large Questão A - Sequência de Inteiros}}
+\textbf{{\Large Questão B - Conjunto de Inteiros}}
 \end{center}
 \vspace{5pt}
-Faça um programa que leia uma sequência de triplas de números inteiros \textbf{\textit{A}}, \textbf{\textit{B}} e \textbf{\textit{C}} do teclado. A quantidade de triplas da sequência é desconhecida, mas ela termina quando \textbf{\textit{A}} for igual a -1. A tripla que contém \textbf{A = -1} não faz parte da sequência.
+Faça um programa que leia um valor \textbf{N}, depois leia \textbf{N} vezes valores \textbf{A} e \textbf{B}.
 \newline \newline
 \textbf{{\large Entrada}} \newline
-A entrada consiste de várias triplas de números inteiros  \textbf{\textit{A}}, \textbf{\textit{B}} e \textbf{\textit{C}}. Sendo que o programa continua lendo conjuntos de 3 inteiros indefinidamente, até que receba um conjunto em que \textbf{\textit{A}} seja igual a -1, devendo desconsiderar este último conjunto. Considere que pelo menos uma tripla válida será lida.
+A entrada contém somente valores inteiros, sendo \textbf{N} $>$ \textbf{0} e \textbf{A,B} $>$ \textbf{0}. Na primeira linha será lido o valor \textbf{N} e nas próximas \textbf{N} linhas serão lidos os valores \textbf{A} e \textbf{B}, separados por espaço.
 \newline \newline
 \textbf{{\large Saída}} \newline
-Para cada tripla que faz parte da sequência de triplas, o programa deve imprimir a média da tripla. No final, o programa deve imprimir \textbf{X}, onde \textbf{X} é a média das médias das triplas que \textbf{\textit{A}} é diferente de -1.
-A média deve ser impressa com 2 casas decimais após a vírgula.
+Ao final imprima a média de todos os \textbf{A} e \textbf{B} pares lidos do teclado, com duas casas decimais após a vírgula.
 \newline
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Exemplo de Entrada}                                            & \textbf{Exemplo de Saída}                                                       \\ \hline
-\begin{tabular}[c]{@{}l@{}}3 3 3\\ 5 0 0\\ 1 3 7\\ -1 2 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}3.00\\ 1.67\\ 3.67 \\ 2.78\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}1 1 1\\ 5 6 7\\ 4 0 2\\ -1 7 8\end{tabular} & \begin{tabular}[c]{@{}l@{}}1.00\\ 6.00\\ 2.00 \\ 3.00\end{tabular} \\ \hline
-\begin{tabular}[c]{@{}l@{}}1 -1 3\\ -3 5 -5\\ -1 0 0\end{tabular}      & \begin{tabular}[c]{@{}l@{}}1.00\\ -1.00\\ 0.00\end{tabular}       \\ \hline
+\textbf{Exemplo de Entrada}                                        & \textbf{Exemplo de Saída} \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\\ 4 8\\ 3 5\\ 2 2\end{tabular}        & 4.00                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}2\\ 8 12\\ 7 9\end{tabular}             & 10.00                     \\ \hline
+\begin{tabular}[c]{@{}l@{}}1\\ 8 24\end{tabular}                   & 16.00                     \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ 12 8\\ 3 4\\ 1 1\\ 2 1\end{tabular} & 6.50                      \\ \hline
 \end{tabular}
-\caption{Questão A}
 \end{table}
 \flushright
 \textbf{\Large Boa Prova!}

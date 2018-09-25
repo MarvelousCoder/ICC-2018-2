@@ -1,3 +1,4 @@
+
 \documentclass[a4paper, 12pt]{article}
 
 \usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
@@ -19,7 +20,7 @@
 	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
 	\textbf{{\large Prova 1} \\
 	\vspace{9pt}
-	{\large Questão A}} \\
+	{\large Questão B}} \\
 	\noindent\rule{\textwidth}{0.4pt}
 	\newline
 \end{center}
@@ -33,27 +34,28 @@
 \end{itemize}
 \newpage % Questão A 
 \begin{center}
-\textbf{{\Large Questão A - Duplas de Inteiros}}
+\textbf{{\Large Questão B - Sequência de Inteiros}}
 \end{center}
 \vspace{5pt}
-Faça um programa que leia uma sequência de duplas de números inteiros do teclado, \textbf{\textit{A}} e \textbf{\textit{N}}. A quantidade de duplas da sequência é desconhecida, mas ela termina quando \textbf{\textit{A}} for igual a -1. A dupla que contém \textbf{A = -1} não faz parte da sequência, devendo ser desconsiderada.
+Faça um programa que leia uma sequência de triplas de números inteiros \textbf{\textit{A}}, \textbf{\textit{B}} e \textbf{\textit{C}} do teclado. A quantidade de triplas da sequência é desconhecida, mas ela termina quando \textbf{\textit{A}} for igual a -1. A tripla que contém \textbf{A = -1} não faz parte da sequência.
 \newline \newline
 \textbf{{\large Entrada}} \newline
-A entrada consiste de várias duplas de inteiros \textbf{\textit{A}} e \textbf{\textit{N}}, separados por espaço. Considere que pelo menos uma dupla válida será lida.
+A entrada consiste de várias triplas de números inteiros  \textbf{\textit{A}}, \textbf{\textit{B}} e \textbf{\textit{C}}. Sendo que o programa continua lendo conjuntos de 3 inteiros indefinidamente, até que receba um conjunto em que \textbf{\textit{A}} seja igual a -1, devendo desconsiderar este último conjunto. Considere que pelo menos uma tripla válida será lida.
 \newline \newline
 \textbf{{\large Saída}} \newline
-Ao final da leitura, o programa deve escrever a soma de todos os N que fazem dupla com A múltiplos de 8.
+Para cada tripla que faz parte da sequência de triplas, o programa deve imprimir a média da tripla. No final, o programa deve imprimir \textbf{X}, onde \textbf{X} é a média das médias das triplas que \textbf{\textit{A}} é diferente de -1.
+A média deve ser impressa com 2 casas decimais após a vírgula.
 \newline
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Exemplo de Entrada}                                       & \textbf{Exemplo de Saída} \\ \hline
-\begin{tabular}[c]{@{}l@{}}1 -1\\ 8 2\\ 5 3\\ -1 4\end{tabular}   & 2                         \\ \hline
-\begin{tabular}[c]{@{}l@{}}0 4\\ 8 5\\ -8 -4\\ -1 0\end{tabular}  & 5                         \\ \hline
-\begin{tabular}[c]{@{}l@{}}8 -1\\ 16 1\\ 0 0\\ -1 25\end{tabular} & 0                         \\ \hline
+\textbf{Exemplo de Entrada}                                            & \textbf{Exemplo de Saída}                                                       \\ \hline
+\begin{tabular}[c]{@{}l@{}}3 3 3\\ 5 0 0\\ 1 3 7\\ -1 2 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}3.00\\ 1.67\\ 3.67 \\ 2.78\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1 1 1\\ 5 6 7\\ 4 0 2\\ -1 7 8\end{tabular} & \begin{tabular}[c]{@{}l@{}}1.00\\ 6.00\\ 2.00 \\ 3.00\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}1 -1 3\\ -3 5 -5\\ -1 0 0\end{tabular}      & \begin{tabular}[c]{@{}l@{}}1.00\\ -1.00\\ 0.00\end{tabular}       \\ \hline
 \end{tabular}
-\caption{Questão A}
+\caption{Questão B}
 \end{table}
 \flushright
 \textbf{\Large Boa Prova!}
