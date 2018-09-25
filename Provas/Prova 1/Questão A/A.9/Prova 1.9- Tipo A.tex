@@ -1,0 +1,67 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 1} \\
+	\vspace{9pt}
+	{\large Questão A}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Precipitação e vazão em bacias hidrográficas}}
+\end{center}
+\vspace{5pt}
+
+Para fins de estudos hidrológicos, uma Bacia Hidrográfica (BH) é considerada um conjunto de terras drenadas por um corpo d’agua principal e seus afluentes. Vários autores consideram a importância do uso de conceito de BH similar ao de ecossistema, tanto para estudos como para o Gerenciamento Ambiental. A precipitação, a cobertura florestal e o tipo de solo/subsolo influenciam na vazão dos rios de uma BH. Analise os dados e diga a BH com maior média de índice pluviométrico anual, a BH com o período de menor índice pluviométrico e a área média de uma BH. 
+\newline \newline
+\textbf{{\large Entrada}} \newline
+
+Várias linhas com nome da BH, área em ${Km}^2$ (float), índice pluviométrico no verão, outono, inverno e primavera (inteiro).
+A entrada termina quando o nome, a área e todos os índices da BH forem 0.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Nome da BH com maior média de índice pluviométrico anual.
+\newline
+Nome da BH com o período de menor índice pluviométrico.
+\newline
+A área média de uma BH em ${Km}^2$ com 2 casas decimais de precisão.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Exemplo de Entrada}                                                                                                                                                                                                    & \textbf{Exemplo de Saída}                                                                                  \\ \hline
+\begin{tabular}[c]{@{}l@{}}4\\ Ariquemes-RO 85770 125,7 2,8 2000 144502208,57\\ Cabixi-RO 2771 4,3 0,0 0 5550611,37\\ Ji-Paraná-RO 115123 145,0 8,0 6351 162456203,88\\ Cajubim-RO 13520 19,5 0,2 420 25171237,94\end{tabular} & \begin{tabular}[c]{@{}l@{}}Ji-Parana-RO\\ Ji-Parana-RO\\ \\ Ji-Parana-RO\\ \\ R\$ 84420065,44\end{tabular} \\ \hline
+\end{tabular}
+\end{center}
+\caption{Questão A}
+\end{table}
+
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}
