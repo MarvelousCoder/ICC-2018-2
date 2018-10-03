@@ -9,7 +9,7 @@ for i in range(num):
     nome, vazChuva, vazSeca = input().split()
     vazChuva, vazSeca = [float(vazChuva), float(vazSeca)]
 
-    diferenca += (vazChuva-vazSeca)/num
+    diferenca += float(vazChuva-vazSeca)/num
 
     if i == 0:
         maior = vazChuva
