@@ -32,8 +32,7 @@ for i in range(N):
             r_maior_vazao_s_coleta = nome
 
     if pop_atendida != 0:
-        taxa_atendidos += float(pop_urb)/float(pop_atendida)
-
+        taxa_atendidos += float(pop_urb - pop_atendida)/float(pop_urb)
 print(r_maior_vazao_s_coleta)
 print(r_menor_dbo)
 print('%.2f' % (taxa_atendidos/N))
