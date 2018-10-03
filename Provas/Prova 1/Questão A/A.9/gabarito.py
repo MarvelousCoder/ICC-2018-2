@@ -27,6 +27,7 @@ while True:
     if flag_menor_indc_pluv:
         flag_menor_indc_pluv = False
         menor_indc_pluv = menor_indc
+        r_menor_indc_pluv = nome
         
     if menor_indc < menor_indc_pluv:
         r_menor_indc_pluv = nome
