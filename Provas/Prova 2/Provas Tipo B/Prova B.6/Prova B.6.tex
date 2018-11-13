@@ -26,53 +26,58 @@
 
 \textbf{{\large Observações:}}
 \begin{itemize}
-	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item As provas serão corrigidas por um corretor automático, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída).
+	\item Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada".
+	\item Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
 	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
 	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
-	\item \textbf{Questão A valerá 40\% da nota da Prova 2 e a Questão B valerá 60\% da nota da Prova 2}.
+	\item Cada questão (A e B) vale 50\% da nota da Prova 2.
 	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+
+
 \end{itemize}
-\newpage % Questão A 
+\newpage % Questão B
 \begin{center}
-\textbf{{\Large Questão B - Game Design}}
+\textbf{{\Large Questão B - Detecção de Erros - ISBN-10}}
 \end{center}
-\vspace{5pt}
-Um conceito muito conhecido no game design, na animação e na criação de robôs
-é o \textit{Uncanny Valley}. Ele é a hipótese de que réplicas humanas que parecem quase
-humanas, porém não completamente, despertam um sentimento de repulsa e
-desconforto em seres humanos. \newline \newline
-Depois do sucesso do seu jogo Elastiman, Roberto mais uma vez veio ao seu
-contato. Ele está desenvolvendo um jogo realista, mas está se encontrando preso
-no \textit{Uncanny Valley} por alguns diversos motivos. Seu trabalho será reconhecer
-quais as \textit{features} que estão causando a perda de ``humanidade'' dos seus modelos
-3D. \newline \newline
+
+\vspace{5pt} 
+
+Um dígito verificador é uma redundância utilizada para detecção de erros. É o equivalente decimal de uma paridade binária e é constituída por um ou mais dígitos calculados a partir dos outros dígitos da informação. Por exemplo, para a identificação de livros, em 1967 foi criado e oficializado como norma internacional em 1972, o ISBN - International Standard Book Number. Ele é um sistema que identifica numericamente os livros segundo o título, o autor, o país e a editora, individualizando-os inclusive por edição.
+Os dois erros mais comuns no tratamento de um ISBN, quando escrito ou digitado, é um dígito errado ou a troca de dígitos adjacentes. O método de cálculo do dígito de verificação do ISBN garante que esses dois erros serão sempre detectados. No entanto, se o erro ocorre na editora e não é detectado, o livro será lançado com um ISBN inválido.
+A fórmula para o cálculo do digito verificador do ISBN-13 é o que se segue abaixo:\newline
+$$(10 – (x1 + 3x2 + x3 + 3x4 + ... +x11 + 3x12) mod 10) mod 10 = x13$$
+\newline \newline
 \textbf{{\large Entrada}} \newline
-A primeira linha da entrada contém um inteiro \textbf{N}, o número de features a serem
-descritas. \newline
-As próximas \textbf{N} linhas contêm, cada uma, uma string $\textbf{F}_i$, o nome da \textit{feature} descrita. \newline
-A linha seguinte, por sua vez, contém um inteiro \textbf{M}, o número de modelos a serem
-analisados. \newline
-As próximas \textbf{M} linhas contêm, cada uma, por fim, uma string de \textbf{N} caracteres, cada
-um podendo ser \textbf{X}, caso o modelo atenda à \textit{feature}, ou \textbf{O} (a letra `O'), caso
-contrário. Ou seja, se o \textbf{primeiro} caractere da string for um `X', esse modelo
-atende a \textbf{primeira} \textit{feature}. \newline \newline
-\textbf{{\large Saída}} \newline
-Seu programa deve identificar dentre os modelos para análise, qual o que menos
-atende às \textit{features} definidas (ou seja, o que mais contém `O's) e imprimir na saída
-padrão quais as \textit{features} que ele \textbf{não} atende, na ordem de input, um em cada
-linha. \newline
-Considere que sempre haverá um único modelo com o número mínimo de \textbf{features}
-atendidas.
+Diversos ISBN's, um por linha, onde cada algarismo é um coeficiênte da fórmula acima, começando por x1 e indo até x13. 
 \newline
+A letra X deve ser substituída pelo número 10. 
+\newline
+A entrada pode conter caracteres especiais e seu código deve ignorá-los.
+\newline
+O código deve continuar pedindo ISBN's enquanto não for inserido a palavra FIM.
+\newline \newline
+\textbf{{\large Saída}} \newline
+Se o ISBN-13 estiver certo escreve OK, se estiver errado repete o ISBN-13 seguido da palavra ERRO.\newline
+\newline \newline
+\newline
+
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Exemplo de Entrada}                                                                                                              & \textbf{Exemplo de Saída}                                                                               \\ \hline
-\begin{tabular}[c]{@{}l@{}}3\\ olhos vibrantes\\ texturas sólidas\\ cabelo com reflexão\\ 2\\ OXO\\ XOX\end{tabular}                     & \begin{tabular}[c]{@{}l@{}}olhos vibrantes\\ cabelo com reflexão\end{tabular}                           \\ \hline
-\begin{tabular}[c]{@{}l@{}}2\\ ciclo de caminhada natural\\ animações de diálogo não-robóticas\\ 5\\ XX\\ OO\\ XO\\ OX\\ XX\end{tabular} & \begin{tabular}[c]{@{}l@{}}ciclo de caminhada natural\\ animações de diálogo não-robóticas\end{tabular} \\ \hline
+\textbf{Entrada}                                                                                                              & \textbf{Saída}                                                      
+
+\\ \hline
+\begin{tabular}[c]{@{}l@{}} 853527782X\\ 978-8582602980\\ 8565848280\\ 978-8565848282\\ 8535286411\\ FIM\end{tabular}                                                                                                          & \begin{tabular}[c]{@{}l@{}}853527782X ERRO\\ OK\\ 8565848280 ERRO\\ OK\\ 8535286411 ERRO\end{tabular}
+\\ \hline
+\begin{tabular}[c]{@{}l@{}} 978-0671894412\\ 978/85658482*825\\ FIM\end{tabular}                                            & \begin{tabular}[c]{@{}l@{}}OK\\ 978/85658482*825 ERRO\end{tabular} 
+\\ \hline
+
 \end{tabular}
+\caption{Questão B}
 \end{table}
+
 \flushright
 \textbf{\Large Boa Prova!}
 \end{document}

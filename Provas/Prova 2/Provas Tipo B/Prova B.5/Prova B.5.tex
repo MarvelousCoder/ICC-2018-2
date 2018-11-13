@@ -26,47 +26,59 @@
 
 \textbf{{\large Observações:}}
 \begin{itemize}
-	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item As provas serão corrigidas por um corretor automático, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída).
+	\item Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada".
+	\item Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
 	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
 	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
-	\item \textbf{Questão A valerá 40\% da nota da Prova 2 e a Questão B valerá 60\% da nota da Prova 2}.
+	\item Cada questão (A e B) vale 50\% da nota da Prova 2.
 	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+
+
 \end{itemize}
-\newpage % Questão A 
+\newpage % Questão B
 \begin{center}
-\textbf{{\Large Questão B - Estado}}
+\textbf{{\Large Questão B - Detecção de Erros - ISBN-10}}
 \end{center}
-\vspace{5pt}
-Estamos vivendo um período de crise política, e, cada dia mais, não é segredo
-para ninguém que a maioria dos nossos políticos está envolvido em algum
-esquema de desvio de dinheiro público. \newline
-Como o cidadão consciente e ativista que é, você decidiu usar suas habilidades
-como programador para o bem e criar um software que analisa as contas públicas
-e identifica potenciais corruptos usando inteligência artificial. \newline \newline
-Porém, em uma das últimas semanas de trabalho intenso e de afinco, você se
-deparou com um problema. Você precisa de um programa que encontre políticos
-pelas denúncias a ele associadas. \newline \newline
+
+\vspace{5pt} 
+
+Um dígito verificador é uma redundância utilizada para detecção de erros. É o equivalente decimal de uma paridade binária e é constituída por um ou mais dígitos calculados a partir dos outros dígitos da informação. Por exemplo, para a identificação de livros, em 1967 foi criado e oficializado como norma internacional em 1972, o ISBN - International Standard Book Number. Ele é um sistema que identifica numericamente os livros segundo o título, o autor, o país e a editora, individualizando-os inclusive por edição.
+Os dois erros mais comuns no tratamento de um ISBN, quando escrito ou digitado, é um dígito errado ou a troca de dígitos adjacentes. O método de cálculo do dígito de verificação do ISBN garante que esses dois erros serão sempre detectados. No entanto, se o erro ocorre na editora e não é detectado, o livro será lançado com um ISBN inválido.
+A fórmula para o cálculo do digito verificador do ISBN-10 é o que se segue abaixo.
+\newline
+$$(10x1 + 9x2 + 8x3 + 7x4 + 6x5 + 5x6 + 4x7 + 3x8 + 2x9 + x10) mod 11 = 0$$
+\newline \newline
 \textbf{{\large Entrada}} \newline
-A primeira linha da entrada contém um inteiro \textbf{N}, o número de políticos registrados
-no sistema. \newline
-As próximas \textbf{N} linhas contêm, cada uma, uma string sem espaços \textbf{P}, o nome do
-político, e uma sequência de strings $\textbf{D}_P$, as denúncias a ele associadas. Considere
-que dois políticos diferentes nunca terão o mesmo nome. \newline
-A última linha da entrada contém uma sequência de strings $\textbf{D}_R$, as denúncias a
-serem pesquisadas. \newline \newline
+Diversos ISBN's, um por linha, onde cada algarismo é um coeficiênte da fórmula acima, começando por x1 e indo até x10. 
+\newline
+A letra X deve ser substituída pelo número 10.
+\newline
+A entrada pode conter caracteres especiais e seu código deve ignorá-los.
+\newline
+O código deve continuar pedindo ISBN's enquanto não for inserido a palavra FIM.
+\newline \newline
 \textbf{{\large Saída}} \newline
-Seu programa deve imprimir uma única linha na saída padrão, o nome dos
-políticos que têm envolvimento em pelo menos um dos esquemas de corrupção
-citados, em ordem alfabética. \newline
+Se o ISBN-10 estiver certo escreve OK, se estiver errado repete o ISBN-10 seguido da palavra ERRO.\newline
+\newline \newline
+\newline
+
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Exemplo de Entrada}                                                                                                                                     & \textbf{Exemplo de Saída}       \\ \hline
-\begin{tabular}[c]{@{}l@{}}3\\ Jobernardo Furnas Petrobrás Odebrecht\\ MariaDeSouza Odebrecht JBS\\ JulioRoberto Furnas Petrobrás\\ Odebrecht\end{tabular}      & Jobernardo MariaDeSouza         \\ \hline
-\begin{tabular}[c]{@{}l@{}}4\\ JuliaAlala Volkswagen Fiat\\ MulioRobaldo Fiat Uno\\ Nadindo Volkswagen Uno\\ KatioJumbo Fiat Fiat\\ Uno Volkswagen\end{tabular} & JuliaAlala MulioRobaldo Nadindo \\ \hline
+\textbf{Entrada}                                                                                                              & \textbf{Saída}                                                      
+
+\\ \hline
+\begin{tabular}[c]{@{}l@{}} 853527782X\\978/8582602980\\ 8565848280\\ 978-8565848282\\ 8535286411\\ FIM\end{tabular}                                                                                                          & \begin{tabular}[c]{@{}l@{}}OK\\ 978/8582602980 ERRO\\ OK\\ 978-8565848282 ERRO\\ OK\end{tabular}
+\\ \hline
+\begin{tabular}[c]{@{}l@{}} 85-216*0372-X\\ 85-216-0372-x\\ 0-201-88954\\ FIM\end{tabular}                                            & \begin{tabular}[c]{@{}l@{}}OK\\ OK\\ 0-201-88954 ERRO\end{tabular} 
+\\ \hline
+
 \end{tabular}
+\caption{Questão B}
 \end{table}
+
 \flushright
 \textbf{\Large Boa Prova!}
 \end{document}

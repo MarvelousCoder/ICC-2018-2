@@ -1,19 +1,59 @@
-N = int(input())
+dicionario = {
+'.':'E',
+'-':'T',
+'.-':'A',
+'---':'O',
+'..':'I',
+'-.':'N',
+'...':'S',
+'.-.':'R',
+'....':'H',
+'.-..':'L',
+'-..':'D',
+'-.-.':'C',
+'..-':'U',
+'--':'M',
+'..-.':'F',
+'.--.':'P',
+'--.':'G',
+'.--':'W',
+'-.--':'Y',
+'-...':'B',
+'...-':'V',
+'-.-':'K',
+'-..-':'X',
+'.---':'J',
+'--.-':'Q',
+'--..':'Z',
+'.----':'1',
+'..---':'2',
+'...--':'3',
+'....-':'4',
+'.....':'5',
+'-....':'6',
+'--...':'7',
+'---..':'8',
+'----.':'9',
+'-----':'0',
+'.-.-.-':'.',
+'--..--':',',
+'..--..':'?',
+'-....-':'-',
+}
 
-def parseHour(str):
-    return int(str.replace(":", ""))
+listaMorse = []
+codigo = input()
 
-workers = {}
+while (codigo != '..-. .. --'):
+	listaMorse.append(codigo)
+	codigo = input()
 
-for i in range(N):
-    S = input().split()
-    workers[S[0]] = [parseHour(x) for x in S[1:]]
+traducao = ''
 
-R = parseHour(input())
+for palavraMorse in listaMorse:
+	letrasMorse = palavraMorse.split()
+	for letra in letrasMorse:
+		traducao = traducao + dicionario[letra]
+	traducao += '\n'
 
-request = []
-for worker in sorted(workers, key=str.lower):
-    if workers[worker][0] <= R <= workers[worker][1]:
-        request.append(worker)
-
-print(' '.join(request))
+print(traducao)

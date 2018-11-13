@@ -1,33 +1,28 @@
-N = int(input())
+isbn = input()
 
-features = []
+while(isbn != 'FIM'):
+  x = []
+  count = 0
+  for caracter in isbn:
+    if caracter not in '-*/':
+      count += 1
+      if caracter == 'x' or caracter == 'X':
+        coeficiente = 10
+      else:
+        coeficiente = int(caracter)
+      x.append(coeficiente)
+    else:
+      pass
 
-for i in range(N):
-    features.append(input())
 
-M = int(input())
-lesser = []
+  if count == 13: 
+      formula = (10-(x[0]+ 3*x[1]+ x[2]+ 3*x[3]+ x[4]+ 3*x[5]+ x[6]+ 3*x[7]+ x[8]+ 3*x[9]+
+                          x[10]+ 3*x[11])%10)%10
 
-for i in range(M):
-    model = input()
-    # esta é a melhor forma de resolver esse problema
-    # mas eu não sei se `enumerate` chegou a ser apresentado em sala de aula
-    # failed aqui é uma array de índices de falhas
-
-    failed = [index for (index, x) in enumerate(model) if x == "O"]
-
-    # uma solução bem menos "pythonica", e que supõe que o aluno
-    # não sabe como usar índice no loop seria:
-    index = 0
-    failed = []
-    for c in model:
-        if c == 'O':
-            failed.append(index)
-        index += 1
-    # fim da solução pior
-
-    if len(failed) > len(lesser):
-        lesser = failed
-
-for index in lesser:
-    print(features[index])
+      if formula == x[12]:
+          print("OK")
+      else:
+          print("%s ERRO" %(isbn))
+  else:
+      print("%s ERRO" %(isbn))
+  isbn = input()

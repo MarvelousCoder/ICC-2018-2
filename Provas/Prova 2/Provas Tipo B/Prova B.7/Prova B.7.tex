@@ -26,49 +26,71 @@
 
 \textbf{{\large Observações:}}
 \begin{itemize}
-	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item As provas serão corrigidas por um corretor automático, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída).
+	\item Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada".
+	\item Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
 	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
 	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
-	\item \textbf{Questão A valerá 40\% da nota da Prova 2 e a Questão B valerá 60\% da nota da Prova 2}.
+	\item Cada questão (A e B) vale 50\% da nota da Prova 2.
 	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+
+
 \end{itemize}
-\newpage % Questão A 
+\newpage % Questão B
 \begin{center}
-\textbf{{\Large Questão B - Horários}}
+\textbf{{\Large Questão B - Detecção de Erros - ISBN-10}}
 \end{center}
-\vspace{5pt}
-Percival é dono de uma fábrica de sapatos para peixe, e deseja ter um controle
-maior da entrada e saída dos seus funcionários. Como suas vendas têm
-aumentado bastante nos últimos anos, ele tem tido um lucro maior e deseja fazer
-maiores investimentos no setor de TI da sua empresa. \newline
-Com um pouco de pesquisa, ele logo descobriu que você é o melhor
-desenvolvedor python do Brasil e, portanto, a melhor opção para auxiliá-lo a
-resolver seu objetivo. \newline
-Seu trabalho é criar um software de consulta simples, de funcionários. \newline \newline
+
+\vspace{5pt} 
+
+O Código Morse é um sistema de codificação de letras, números e sinais de pontuação que usa apenas dois símbolos, o ponto e o traço. Desenvolvido por Samuel Morse em 1835, ele é um código econômico, ou seja, foi projetado de tal forma que as letras mais frequentes na língua inglesa tivessem o código mais curto. Por exemplo, na língua inglesa o caracter que aparece com mais frequência em um texto é a letra “E”, representada por um ponto. Depois vem a letra “T” representada por um traço, em seguida o “A” representado por “.-” ponto-traço e assim por diante.
+
+\renewcommand{\familydefault}{\ttdefault}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+E & .   & H & .... & G & --.  & Q & --.-  & 7       & --...  \\ \hline
+T & -   & L & .-.. & W & .--  & Z & --..  & 8       & ---..  \\ \hline
+A & .-  & D & -..  & Y & -.-- & 1 & .---- & 9       & ----.  \\ \hline
+O & --- & C & -.-. & B & -... & 2 & ..--- & 0       & -----  \\ \hline
+I & ..  & U & ..-  & V & ...- & 3 & ...-- & ponto   & .-.-.- \\ \hline
+N & -.  & M & --   & K & -.-  & 4 & ....- & vírgula & --..-- \\ \hline
+S & ... & F & ..-. & X & -..- & 5 & ..... & ?       & ..--.. \\ \hline
+R & .-. & P & .--. & J & .--- & 6 & -.... & -       & -....- \\ \hline
+\end{tabular}
+\end{table}
+
+\renewcommand{\familydefault}{\rmdefault}
+\noindent
 \textbf{{\large Entrada}} \newline
-A primeira linha da entrada contém um inteiro \textbf{N}, o número de funcionários
-cadastrados no sistema. \newline
-As próximas \textbf{N} linhas contêm, cada uma, uma string sem espaços \textbf{N}, o nome do
-funcionário, e duas strings $\textbf{H}_e$ e $\textbf{H}_s$, os horários de entrada e saída desse
-funcionário, respectivamente. Considere que dois funcionários diferentes nunca
-terão o mesmo nome. \newline
-A última linha da entrada contém uma string $\textbf{H}_R$, o horário a ser consultado. \newline \newline
-Considere que cada uma das strings de horário está no formato \textbf{hh:mm}, ou seja,
-horas e minutos separados por um único semicolon (:), num dia de 24 horas. \newline
-Considere também que ninguém irá atravessar a meia noite trabalhando. \newline \newline
+Diversas palavras com símbolos alfanuméricos em Código Morse, um por linha, cada símbolo Morse separado por espaços em branco. 
+\newline
+A entrada de símbolos termina com a palavra “FIM” em Código Morse.
+\newline
+A palavra “FIM” não deve aparecer na saída.
+\newline \newline
 \textbf{{\large Saída}} \newline
-Seu programa deve imprimir uma única linha na saída padrão, contendo todos os
-nomes dos funcionários que estariam trabalhando no horário requisitado,
-separados por espaço, em ordem alfabética. \newline
+As decodificações para o nosso alfabeto, uma por linha.\newline
+\newline \newline
+\newline
+
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|}
 \hline
-\textbf{Exemplo de Entrada}                                                                                         & \textbf{Exemplo de Saída} \\ \hline
-\begin{tabular}[c]{@{}l@{}}3\\ Fulano 03:00 08:00\\ Sicrano 05:00 09:00\\ Abelardo 07:00 11:00\\ 04:00\end{tabular} & Fulano                    \\ \hline
-\begin{tabular}[c]{@{}l@{}}2\\ Yurick 09:30 19:30\\ André 07:00 22:00\\ 12:00\end{tabular}                          & André Yurick              \\ \hline
+\textbf{Entrada}                                                                                                              & \textbf{Saída}                                                      
+
+\\ \hline
+\begin{tabular}[c]{@{}l@{}} \texttt{-.-. . --}\\ \texttt{.---- ----- -----}\\ \texttt{..-. .. --}\end{tabular}                                                                                                          & \begin{tabular}[c]{@{}l@{}}CEM\\ 100\end{tabular}
+\\ \hline
+\begin{tabular}[c]{@{}l@{}} \texttt{..-. .. --}\end{tabular}                                            & \begin{tabular}[c]{@{}l@{}}\end{tabular} 
+\\ \hline
+
 \end{tabular}
+\caption{Questão B}
 \end{table}
+
 \flushright
 \textbf{\Large Boa Prova!}
 \end{document}
