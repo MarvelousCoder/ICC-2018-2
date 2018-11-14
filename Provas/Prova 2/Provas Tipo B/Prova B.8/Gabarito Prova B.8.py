@@ -1,33 +1,25 @@
-N = int(input())
+morse = {'A': '.-',     'B': '-...',   'C': '-.-.', 
+        'D': '-..',    'E': '.',      'F': '..-.',
+        'G': '--.',    'H': '....',   'I': '..',
+        'J': '.---',   'K': '-.-',    'L': '.-..',
+        'M': '--',     'N': '-.',     'O': '---',
+        'P': '.--.',   'Q': '--.-',   'R': '.-.',
+     	'S': '...',    'T': '-',      'U': '..-',
+        'V': '...-',   'W': '.--',    'X': '-..-',
+        'Y': '-.--',   'Z': '--..',
+        
+        '0': '-----',  '1': '.----',  '2': '..---',
+        '3': '...--',  '4': '....-',  '5': '.....',
+        '6': '-....',  '7': '--...',  '8': '---..',
+        '9': '----.' , '.': '.-.-.-', ',': '–..–',
+        '?': '..–..',  '-': '-....-'
+        }
 
-features = []
-
-for i in range(N):
-    features.append(input())
-
-M = int(input())
-lesser = []
-
-for i in range(M):
-    site = input()
-    # esta é a melhor forma de resolver esse problema
-    # mas eu não sei se `enumerate` chegou a ser apresentado em sala de aula
-    # failed aqui é uma array de índices de falhas
-
-    failed = [index for (index, x) in enumerate(site) if x == "O"]
-
-    # uma solução bem menos "pythonica", e que supõe que o aluno
-    # não sabe como usar índice no loop seria:
-    index = 0
-    failed = []
-    for c in site:
-        if c == 'O':
-            failed.append(index)
-        index += 1
-    # fim da solução pior
-
-    if len(failed) > len(lesser):
-        lesser = failed
-
-for index in lesser:
-    print(features[index])
+inp = input()
+while inp != 'FIM':
+    saida = ''
+    for let in inp:
+        saida += morse[let] + ' '
+    saida = saida[:-1]
+    print(saida)
+    inp = input()

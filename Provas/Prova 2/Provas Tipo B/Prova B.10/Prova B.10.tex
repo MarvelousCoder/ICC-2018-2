@@ -1,0 +1,78 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 2} \\
+	\vspace{9pt}
+	{\large Questão B}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item \textbf{Cada questão (A e B) vale 50\% da nota da prova 2}.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão B - Algoritmos de Compactação}}
+\end{center}
+\vspace{5pt}
+
+Uma imagem possui muita redundância espacial, inclusive imagens feitas com caracteres da tabela ASCII. Para diminuir o tamanho dos arquivos com estas imagens, alguém inventou a seguinte codificação. Quando um caracter aparecer de forma seguida (na mesma linha) na imagem, ele será substituído por um número que será a quantidade de vezes que o caractere aparece seguido na imagem mais o caracter propriamente dito.
+
+\newline \newline
+A sequência "3@5!2)4A" por exemplo, se torna "@@@!!!!!))AAAA".
+\\
+
+\newline \newline
+\textbf{{\large Entrada}} \newline
+
+A imagem compactada, linha por linha. A imagem termina quando a palavra “fim” aparece isolada em uma linha (última linha).
+\\
+
+\newline \newline
+\textbf{{\large Saída}} \newline
+
+Imagem em caracteres ASCII. Ao final, o tamanho original da imagem e o seu tamanho após a compactação.
+\newline
+\\
+\\
+\newline \newline
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Entrada                                                                                                            & Saida                                                                                                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}3\#1O3\#\\ 2\#1O1\#1O2\#\\ 1\#1O3O1O1\#\\ 2\#1O1\#1O2\#\\ 3\#1O3\#\\ fim\end{tabular} & \begin{tabular}[c]{@{}l@{}}\#\#\#O\#\#\#\\ \#\#O\#O\#\#\\ \#O\#\#\#O\#\\ \#\#O\#O\#\#\\ \#\#\#O\#\#\#\end{tabular}  \\ \hline
+\begin{tabular}[c]{@{}l@{}}6O\\ 6A\\ 6C\\ 6D\\ 1A1E1A1E1A1E\\fim\end{tabular}   
+& \begin{tabular}[c]{@{}l@{}}OOOOOO\\ AAAAAA\\ CCCCCC\\ DDDDDD\\ AEAEAE\end{tabular}                                                                \\ \hline
+\begin{tabular}[c]{@{}l@{}}3(1O3)\\ 2(2O2)\\ 1(3O1)\\ 4O\\fim\end{tabular}   
+&
+\begin{tabular}[c]{@{}l@{}}(((O)))\\ ((OO))\\ (OOO)\\ OOOO\end{tabular}                                                                              \\ \hline
+\end{tabular}
+\end{table}
+
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}

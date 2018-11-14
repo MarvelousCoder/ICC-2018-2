@@ -1,13 +1,14 @@
-mix = input()
-new_mix = ""
-
-for c in mix:
-    if c.isupper():
-        new_mix += "_"
-    new_mix += c.lower()
-
-splitted = new_mix.split("_")
-print("-".join([x for x in splitted if x != ""]))
-# você também pode fazer algo como
-# while "" in splitted: splitted.remove("")
-# para remover os - repetidos :)
+inp = input()
+while inp != 'fim':
+    cur_char = inp[0]
+    count = 0
+    for let in inp:
+        if let != cur_char:
+            print(str(count) + cur_char, end='')
+            cur_char = let
+            count = 1
+        else:
+            count += 1
+    print(str(count) + cur_char)
+    inp = input()
+    
