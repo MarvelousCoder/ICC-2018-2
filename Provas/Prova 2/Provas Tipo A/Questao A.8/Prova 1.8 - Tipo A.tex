@@ -1,0 +1,73 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx} % inserir figuras - \includegraphics[scale=•]{•}
+\usepackage{float} % ignorar regras de tipografia e inserir figura aonde queremos.
+\usepackage[brazil]{babel} % Trocar Figure para Figura.
+\usepackage{indentfirst}
+\pagestyle{empty}
+
+
+\begin{document}
+\begin{figure}[H]
+	\includegraphics[scale=0.9]{UnB_CiC_Logo.jpg}
+\end{figure}
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+	\textbf{{\Large Introdução à Ciência da Computação - 113913}} \newline \newline
+	\textbf{{\large Prova 2} \\
+	\vspace{9pt}
+	{\large Questão A}} \\
+	\noindent\rule{\textwidth}{0.4pt}
+	\newline
+\end{center}
+
+\textbf{{\large Observações:}}
+\begin{itemize}
+	\item As provas também serão corrigidas por um \textbf{corretor automático}, portanto é necessário que as entradas e saídas do seu programa estejam conforme o padrão especificado em cada questão (exemplo de entrada e saída). Por exemplo, não use mensagens escritas durante o desenvolvimento do seu código como “Informe a primeira entrada”. Estas mensagens não são tratadas pelo corretor, portanto a correção irá resultar em resposta errada, mesmo que seu código esteja correto.
+	\item Serão testadas várias entradas além das que foram dadas como exemplo, assim como as listas.
+	\item Assim como as listas, as provas devem ser feitas na versão Python 3 ou superior.
+	\item \textbf{Cada questão (A e B) vale 50\% da nota da prova 2}.
+	\item Leia com atenção e faça \textbf{exatamente} o que está sendo pedido.
+\end{itemize}
+\newpage % Questão A 
+\begin{center}
+\textbf{{\Large Questão A - Contagem de palavras}}
+\end{center}
+\vspace{5pt}
+
+Roberto é um músico que acredita ter descoberto a fórmula do sucesso. Ele decidiu analisar as músicas mais famosas dos últimos anos para descobrir quais palavras aparecem com mais frequência e então utilizar essas palavras em suas músicas.
+
+Para conseguir analisar as músicas mais rapidamente, Roberto contratou um programador para realizar essa tarefa.
+
+\newline \newline
+\textbf{{\large Entrada}} \newline
+
+A entrada consiste em apenas uma linha contendo trechos de uma música as palavras estam separadas por espaços ou pontuações e podem haver variações de capitalização que não devem ser levadas em conta na contagem. As palavras "abacate", "Abacate" e "ABACATE" sempre contam como a mesma palavra
+\newline \newline
+\textbf{{\large Saída}} \newline
+
+Seu programa deve imprimir múltiplas linhas. Cada linha deve conter uma string W que é a palavra capitalizada e um inteiro Q representando a quantidade de vezes que essa palavra aparece. A ordem da saída deve ser em ordem de Q maior para Q menor, palavras que aparecem o mesmo número de vezes devem ser apresentadas na ordem em que aparecem na música.
+\\
+\newline \newline
+\textbf{{\large Exemplo}} \newline
+\textit{Exemplos na próxima página}
+\begin{table}[htb]
+\centering
+\begin{tabular}{|l|l|l}
+\cline{1-2}
+Entrada                                                                                                                                                                                                          & Saida                                                                                                                                                                                                                                                                                       &  \\ \cline{1-2}
+\begin{tabular}[c]{@{}l@{}}E nessa loucura de dizer que nao te quero \\ Vou negando as aparencias \\ Disfarçando as evidencias \\ Mas pra que viver fingindo \\ Se eu nao posso enganar meu coracao\end{tabular} & \begin{tabular}[c]{@{}l@{}}Que 2\\ Nao 2\\ As 2\\ E 1\\ Nessa 1\\ Loucura 1\\ De 1\\ Dizer 1\\ Te 1\\ Quero 1\\ Vou 1\\ Negando 1\\ Aparencias 1\\ Disfarçando 1\\ Evidencias 1\\ Mas 1\\ Pra 1\\ Viver 1\\ Fingindo 1\\ Se 1\\ Eu 1\\ Posso 1\\ Enganar 1\\ Meu 1\\ Coracao 1\end{tabular} &  \\ \cline{1-2}
+\begin{tabular}[c]{@{}l@{}}Sou eu bola de fogo, e o calor ta de matar\\ Vai ser na praia da barra que uma moda eu vou lancar\end{tabular}                                                                        & \begin{tabular}[c]{@{}l@{}}Eu 2\\ De 2\\ Sou 1\\ Bola 1\\ Fogo 1\\ E 1\\ O 1\\ Calor 1\\ Ta 1\\ Matar 1\\ Vai 1\\ Ser 1\\ Na 1\\ Praia 1\\ Da 1\\ Barra 1\\ Que 1\\ Uma 1\\ Moda 1\\ Vou 1\\ Lancar 1\end{tabular}                                                                          &  \\ \cline{1-2}
+\end{tabular}
+\end{table}
+\\
+Dica: Ao testar os casos de exemplo, lembre-se que o trecho da música deve ser fornecido para o programa em uma única linha.
+
+
+\flushright
+\textbf{\Large Boa Prova!}
+\end{document}
