@@ -1,12 +1,14 @@
-N = int(input())
-maps = {}
+bina, dec = input().split()
 
-for i in range(N):
-    S, X0, Y0, XF, YF = input().split()
+codPar = bina[-1]
 
-    maps[S] = (int(XF) - int(X0), int(YF) - int(Y0))
-
-parties = input().split()
-
-for party in parties:
-    print(maps[party][0], maps[party][1])
+for i in range(int(dec)):
+    binaAux = input()
+    paridade = 0
+    for item in binaAux:
+        if item == codPar:
+            paridade += 1
+    if paridade%2 == 0:
+        print("OK")
+    else:
+        print("Erro detectado")
